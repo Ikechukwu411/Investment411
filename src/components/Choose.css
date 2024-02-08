@@ -1,0 +1,26 @@
+.choose {
+  font-weight: 500;
+}
+.faMoney {
+  background-color: #fafafa;
+  padding: 3rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+}
+.Earn h3 {
+  color: black;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.Earn p {
+  font-family: Roboto;
+  color: gray;
+  width: 80%;
+  margin: auto;
+}
+.chooseContainer {
+  padding-bottom: 7rem;
+  padding-top: 6rem;
+}

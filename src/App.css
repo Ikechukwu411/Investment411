@@ -1,0 +1,273 @@
+.jobber {
+  opacity: 0;
+  transform: translateY(8rem);
+  transition: opacity 1s, transform 1s;
+}
+.jobber.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.aboutHero {
+  background-image: url(../src/assets/Aboutus.jpg);
+  width: 100%;
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.aboutHero::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to top, #1565c09f, #063e7e55);
+  visibility: visible;
+}
+
+.aboutHeroText {
+  position: absolute;
+  color: white;
+  font-weight: 700;
+  z-index: 1;
+  top: 80%;
+  margin-top: 6rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.used {
+  font-weight: 500;
+}
+
+.FaHouseUser,
+.FaAward,
+.FaGlobeAmericas {
+  background-color: #fafafa;
+  padding: 3rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+}
+.global1,
+.awards1,
+.users1 {
+  font-weight: 500;
+}
+.aboutInfo {
+  background-color: #fafafa;
+}
+.aboutInfotxt p:nth-child(1) {
+  color: #1565c0;
+  font-weight: 500;
+}
+.aboutInfotxt h1 {
+  font-weight: 500;
+}
+img {
+  border-radius: 8px;
+}
+
+.offerSec {
+  margin-top: -6rem;
+}
+.chooseTxt h1 {
+  font-weight: 500;
+}
+.chooseTxt > p:nth-child(1) {
+  color: #1565c0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.herosection {
+  background-image: url("https://i.pinimg.com/564x/af/aa/9e/afaa9e93bdb96d7ad9b8f5c9cd273f49.jpg");
+  height: 60vh;
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box5 {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-right: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  padding-bottom: 3rem;
+}
+.fontsize {
+  /* font-weight: 500; */
+}
+#standard {
+  font-weight: 500;
+}
+#bgcolor {
+  background-color: #fafafa;
+}
+.FAQ {
+  background-image: url("https://img.freepik.com/free-photo/composition-with-question-mark-urban-landscape_23-2150525221.jpg?w=740&t=st=1707388886~exp=1707389486~hmac=2ebcad5864d371a8114dc55258c78b3eb3c5beb8b023a1d6d46a4fb2ffd1aedf");
+  height: 80vh;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#FAQh1 {
+  font-weight: 500;
+}
+#isOpen {
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.login-container {
+  background-color: white;
+  border: 1px solid rgba(128, 128, 128, 0.298);
+  width: 70%;
+  margin: 10rem auto;
+  max-width: 480px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login {
+  background-color: #1565c00a;
+  height: 100%;
+}
+
+.greenBox {
+  background-color: #1565c0;
+  height: 8rem;
+  width: 80%;
+  position: absolute;
+  left: 11%;
+  margin-top: -4rem;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: 23px 23px 58px #c1c1c1, -23px -23px 58px #ffffff;
+}
+
+.greenBox h1 {
+  color: white;
+  font-style: italic;
+  font-size: 32px;
+  margin: auto;
+  text-align: center;
+}
+form {
+  padding-top: 6rem;
+}
+.form > button {
+  display: flex;
+  width: inherit;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+}
+.drop {
+  width: 5rem;
+  height: 5rem;
+  background-color: #1565c0;
+  color: white;
+  padding: auto;
+}
+.drop p {
+  font-size: 32px;
+  font-weight: bold;
+  font-style: italic;
+}
+#form {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.signup {
+  width: 100%;
+  background-color: white;
+}
+.signup1 {
+  width: 100%;
+  background-color: white;
+}
+.signupContainer {
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  /* height: 80vh; */
+  width: 100%;
+  background-color: white;
+}
+.welcome {
+  height: 80vh;
+  position: relative;
+  background-image: url("https://img.freepik.com/free-photo/close-up-young-business-team-working_23-2149153874.jpg?w=740&t=st=1707393583~exp=1707394183~hmac=a6a50c2b859556beeed5d87c57e6118aa82e01d65ef0d4f4683edea08ebf076d");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.welcome::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 80vh;
+  width: 100%;
+  background-color: #13182c89;
+  z-index: 1;
+}
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 40px solid white;
+  border-top: 40px solid white;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.678);
+  z-index: 2;
+}
+
+.welcomeText {
+  text-align: center;
+  padding-top: 5rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+.welcomeText > button {
+  background-color: transparent;
+  border: 2px solid white;
+}
+.welcomeText > button:hover {
+  background-color: white;
+  color: #13182c;
+}
+.returnHome {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  position: relative;
+  z-index: 2;
+}
+
+.returnHome a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

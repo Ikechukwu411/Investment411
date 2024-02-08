@@ -1,0 +1,28 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import Home from "./Pages/Home.jsx";
+import About1 from "./Pages/About1.jsx";
+import Investment from "./Pages/Investment.jsx";
+import Frequent from "./Pages/FAQ.jsx";
+import Login from "./Pages/Login.jsx";
+import Register from "./Pages/Register.jsx";
+const App = () => {
+  return (
+    <React.Fragment>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navbar />} />
+          <Route index element={<Home />} />
+          <Route path="about1" element={<About1 />} />
+          <Route path="investment" element={<Investment />} />
+          <Route path="Frequent" element={<Frequent />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
+    </React.Fragment>
+  );
+};
+
+export default App;

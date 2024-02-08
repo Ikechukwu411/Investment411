@@ -1,0 +1,16 @@
+.contact {
+  background-color: #fafafa;
+  height: 50vh;
+  text-align: center;
+}
+button {
+  background-color: #1565c0;
+}
+.contact p {
+  font-weight: 500;
+}
+.investPlan {
+  color: #1565c0;
+  text-transform: uppercase;
+  font-weight: 500;
+}

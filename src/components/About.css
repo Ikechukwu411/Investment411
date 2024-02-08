@@ -1,0 +1,23 @@
+.about {
+  background-color: #fafafa;
+  width: 100%;
+  /* height: 80vh; */
+}
+.aboutTxt p:nth-child(1) {
+  color: #1565c0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.aboutTxt p:last-child {
+  color: rgb(84, 83, 83);
+
+  font-family: Roboto;
+}
+.aboutTxt {
+  padding-top: 4rem;
+}
+.aboutTxt h2 {
+  color: black;
+  font-weight: 500;
+}

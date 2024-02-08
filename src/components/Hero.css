@@ -1,0 +1,59 @@
+.hero {
+  background-image: url(../assets/Image1.jpg);
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  animation: changeImage infinite 20s;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: #0c0c0c94;
+}
+.hero-Text h1 {
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.hero-Text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+.hero-Text button {
+  background-color: #1565c0;
+  color: white;
+}
+@keyframes changeImage {
+  0% {
+    background-image: url(../assets/Image1.jpg);
+    /* background-size: 100%; */
+  }
+  20% {
+    background-image: url(../assets/Image2.jpg);
+    /* background-size: 105%; */
+  }
+  40% {
+    background-image: url(../assets/image3.jpg);
+    /* background-size: 110%; */
+  }
+  60% {
+    background-image: url(../assets/investment.jpg);
+    /* background-size: 115%; */
+  }
+  100% {
+    background-image: url(../assets//high-rise-buildings-modern-city_1359-1126.jpg);
+    /* background-size: 120%; */
+  }
+}

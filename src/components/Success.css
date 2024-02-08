@@ -1,0 +1,24 @@
+.success {
+  height: 70vh;
+  width: 100%;
+  background-image: url(../assets/imagebackground.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.box2 {
+  position: absolute;
+  bottom: -18%;
+  left: 10%;
+  width: 80%;
+  /* height: 20rem; */
+  margin: auto auto;
+}
+.FaQuoteLeft {
+  width: 50px;
+  height: 50px;
+  background-color: #1565c0;
+  border-radius: 50%;
+  padding: 1rem;
+}
