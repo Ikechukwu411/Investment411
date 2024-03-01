@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
 import Setup from "../components/Setup.jsx";
 import Footer from "../components/Footer.jsx";
-import NavbarBottom from "../components/NavbarBottom.jsx";
+import Offer from "../components/Offer.jsx";
 import Certify1 from "../components/Certify1.jsx";
 import AboutSimplified from "../components/AboutSimplified.jsx";
 import TradingView from "../components/TradingView.jsx";
@@ -12,6 +12,7 @@ import Million from "../components/Million.jsx";
 import InvestmentPlan from "../components/InvestmentPlan.jsx";
 import FourthSection from "../components/FourthSection.jsx";
 import Roots from "../components/Roots.jsx";
+import TabComponent from "../components/Tab.jsx";
 
 const Home = () => {
   useEffect(() => {
@@ -67,6 +68,12 @@ const Home = () => {
       </div>
       <div className="jobber">
         <Certify1 />
+      </div>
+      <div className="jobber">
+        <TabComponent />
+      </div>
+      <div className="jobber">
+        <Offer />
       </div>
       {/* <NavbarBottom /> */}
       <Footer />

@@ -27,11 +27,41 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  background-attachment: fixed;
   color: white;
   position: relative;
   height: 70vh;
   width: 100%;
 }
+.box10 {
+  width: 90%;
+  margin: 3rem auto;
+  max-width: 400px;
+  min-width: 200px;
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border-top: 4px solid #2cb1bc;
+  padding: 3rem;
+}
+
+.dificolor {
+  background-color: #2cb1bc;
+  color: white;
+  padding: 1rem;
+  width: 100px;
+  height: 100px;
+}
+.logoheader {
+  color: #2cb1bc;
+  font-weight: bold;
+}
+
+.registerbackground {
+  background-color: #f8fafc;
+  height: 100vh;
+}
+
 .millionusers::before {
   content: "";
   width: 100%;
