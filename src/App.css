@@ -1,3 +1,46 @@
+.companyIv {
+  color: #1d1749;
+}
+#innovate {
+  color: #2c236b;
+}
+.abt {
+  color: orange;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.millionusers {
+  background-image: url(../src/assets/users.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: white;
+  position: relative;
+  height: 70vh;
+  width: 100%;
+}
+.millionusers::before {
+  content: "";
+  width: 100%;
+  height: inherit;
+  background-color: #13182c31;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .jobber {
   opacity: 0;
   transform: translateY(8rem);
@@ -91,12 +134,13 @@ img {
   background-size: cover;
 }
 .box5 {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border: 0.5px solid rgba(128, 128, 128, 0.46);
   margin-right: 2rem;
   margin-bottom: 3rem;
   font-weight: 500;
   padding-bottom: 3rem;
+  border-radius: 5px;
 }
 .fontsize {
   /* font-weight: 500; */

@@ -2,14 +2,16 @@ import React, { useEffect } from "react";
 import "../App.css";
 import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
-import Choose from "../components/Choose.jsx";
-import About from "../components/About.jsx";
 import Setup from "../components/Setup.jsx";
-import Success from "../components/Success.jsx";
-import Offer from "../components/Offer.jsx";
-import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer.jsx";
 import NavbarBottom from "../components/NavbarBottom.jsx";
+import Certify1 from "../components/Certify1.jsx";
+import AboutSimplified from "../components/AboutSimplified.jsx";
+import TradingView from "../components/TradingView.jsx";
+import Million from "../components/Million.jsx";
+import InvestmentPlan from "../components/InvestmentPlan.jsx";
+import FourthSection from "../components/FourthSection.jsx";
+import Roots from "../components/Roots.jsx";
 
 const Home = () => {
   useEffect(() => {
@@ -43,24 +45,30 @@ const Home = () => {
       <Navbar />
       <Hero />
       <div className="jobber">
-        <Choose />
-      </div>
-      <div className="jobber">
-        <About />
+        <AboutSimplified />
       </div>
       <div className="jobber">
         <Setup />
       </div>
       <div className="jobber">
-        <Success />
+        <TradingView />
       </div>
       <div className="jobber">
-        <Offer />
+        <Million />
       </div>
       <div className="jobber">
-        <Contact />
+        <InvestmentPlan />
       </div>
-      <NavbarBottom />
+      <div className="jobber">
+        <Roots />
+      </div>
+      <div className="jobber">
+        <FourthSection />
+      </div>
+      <div className="jobber">
+        <Certify1 />
+      </div>
+      {/* <NavbarBottom /> */}
       <Footer />
     </React.Fragment>
   );
