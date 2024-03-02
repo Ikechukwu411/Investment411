@@ -7,6 +7,13 @@ import Investment from "./Pages/Investment.jsx";
 import Frequent from "./Pages/FAQ.jsx";
 import Login from "./Pages/Login.jsx";
 import Register from "./Pages/Register.jsx";
+import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
+import Analytics from "./Pages/Dashboard/Analytics.jsx";
+import Feed from "./Pages/Dashboard/Feed.jsx";
+import Transact from "./Pages/Dashboard/Transact.jsx";
+import Wallet from "./Pages/Dashboard/Wallet.jsx";
+import Profile from "./Pages/Dashboard/Profile.jsx";
+
 const App = () => {
   return (
     <React.Fragment>
@@ -19,6 +26,14 @@ const App = () => {
           <Route path="Frequent" element={<Frequent />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+        </Routes>
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/transaction" element={<Transact />} />
+          <Route path="/wallet" element={<Wallet />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>

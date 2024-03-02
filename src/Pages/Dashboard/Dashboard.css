@@ -1,0 +1,65 @@
+aside {
+  background-color: white;
+  height: 100%;
+  border-right: 2px solid #13182c;
+}
+
+.navbar,
+.menu {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid #13182c;
+}
+
+.menu-list a {
+  margin-bottom: 1rem;
+  color: black;
+  font-weight: 500;
+}
+.menu-list a:nth-child(1) {
+  margin-top: 2rem;
+}
+.dasboardcontainer {
+  margin: 4rem auto;
+}
+.graph {
+  width: 90%;
+  margin: auto auto;
+  /* height: 10rem; */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(128, 128, 128, 0.259);
+  font-weight: 500;
+  color: black;
+}
+.bigColumn {
+  background-color: rgba(237, 237, 241, 0.06);
+}
+
+.tags {
+  width: 90%;
+  height: 15rem;
+  background-image: url(../../assets/tags.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  margin: 2rem auto;
+}
+/* .tag {
+  width: 90%;
+  height: 20rem;
+  margin: 4rem auto;
+} */
+.transaction {
+  margin-top: 7rem;
+}
+td > li {
+  list-style: none;
+}
+.textcolor {
+  color: black;
+}
+.bggray {
+  background-color: rgb(207, 220, 231);
+}
+.white {
+  background-color: rgba(255, 0, 0, 0.318);
+}
