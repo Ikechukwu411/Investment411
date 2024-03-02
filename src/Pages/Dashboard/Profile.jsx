@@ -24,24 +24,14 @@ const Profile = () => {
         </div>
         <div className={`navbar-menu ${isActive ? "is-active" : ""} is-size-4`}>
           <div className="navbar-start is-hidden-desktop">
-            <a href="#" className="navbar-item">
+            <Link to="/dashboard" className="is-active">
               Dashboard
-            </a>
-            <a href="/analytics" className="navbar-item">
-              Analytics
-            </a>
-            <a href="" className="navbar-item">
-              Feed
-            </a>
-            <a href="" className="navbar-item">
-              Transactions
-            </a>
-            <a href="" className="navbar-item">
-              Wallet
-            </a>
-            <a href="" className="navbar-item">
-              Profile
-            </a>
+            </Link>
+            <Link to="/analytics">Analytics</Link>
+            <Link to="/feed">Feed</Link>
+            <Link to="/transaction">Transactions</Link>
+            <Link to="/wallet">Wallet</Link>
+            <Link to="/profile">Profile</Link>
           </div>
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
