@@ -1,6 +1,7 @@
 import React from "react";
 import "../components/Hero.css";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom";
 // import Image from "../assets/investment.jpg";
 
 const Hero = () => {
@@ -23,7 +24,9 @@ const Hero = () => {
             Distinctio, quas!
           </p>
 
-          <button className="is-large button mt-6">Get Started </button>
+          <Link to="/register" className="is-large button mt-6 is-info">
+            Get Started{" "}
+          </Link>
         </div>
       </div>
     </React.Fragment>

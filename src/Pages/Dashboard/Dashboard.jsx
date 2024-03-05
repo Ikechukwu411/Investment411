@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../Dashboard/Dashboard.css";
 import { Link } from "react-router-dom";
 import { FaBitcoin } from "react-icons/fa";
+import Progress2 from "./Progress2";
 
 const account3 = {
   owner: "Steven Thomas Williams",
@@ -12,26 +13,6 @@ const account3 = {
 
 const Dashboard = () => {
   const [isActive, setisActive] = useState(false);
-  const [newsData, setNewsData] = useState(null);
-
-  useEffect(() => {
-    const fetchNewsData = async () => {
-      try {
-        const response = await fetch(
-          "https://newsapi.org/v2/everything?q=tesla&from=2024-02-02&sortBy=publishedAt&apiKey=ab6a5f7f8c374418a21364cadbed97b7&pageSize=5&language=en"
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const data = await response.json();
-        setNewsData(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchNewsData();
-  }, []);
 
   return (
     <React.Fragment>
@@ -53,14 +34,24 @@ const Dashboard = () => {
         </div>
         <div className={`navbar-menu ${isActive ? "is-active" : ""} is-size-4`}>
           <div className="navbar-start is-hidden-desktop">
-            <Link to="/dashboard" className="is-active">
+            <Link to="/dashboard" className="is-active navbar-item ">
               Dashboard
             </Link>
-            <Link to="/analytics">Analytics</Link>
-            <Link to="/feed">Feed</Link>
-            <Link to="/transaction">Transactions</Link>
-            <Link to="/wallet">Wallet</Link>
-            <Link to="/profile">Profile</Link>
+            <Link to="/analytics" className="navbar-item ">
+              Analytics
+            </Link>
+            <Link to="/feed" className="navbar-item ">
+              Feed
+            </Link>
+            <Link to="/transaction" className="navbar-item ">
+              Transactions
+            </Link>
+            <Link to="/wallet" className="navbar-item ">
+              Wallet
+            </Link>
+            <Link to="/profile" className="navbar-item ">
+              Profile
+            </Link>
           </div>
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
@@ -119,24 +110,26 @@ const Dashboard = () => {
                     </h1>
                   </div>
                   <div className="column mt-5">
-                    <a
+                    <Link
                       className="button is-responsive is-info is-large"
-                      href="https://www.binance.com/en"
+                      to="https://www.binance.com/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Buy
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       className="button is-responsive is-info is-large ml-5"
-                      href="/withdraw"
+                      to="/withdraw"
                     >
                       Withdraw
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       className="button is-responsive is-info is-large ml-5"
-                      href="/deposit"
+                      to="/deposit"
                     >
                       Deposit
-                    </a>
+                    </Link>
                     <button
                       disabled
                       className="button  is-responsive mt-6-mobile is-info is-large ml-2"
@@ -199,30 +192,8 @@ const Dashboard = () => {
                 </div>
                 <div className="column is-half">
                   <div>
-                    <h2 className="is-size-3 textcolor">
-                      Latest Business News
-                    </h2>
-                    {newsData ? (
-                      <ul>
-                        {newsData.articles.map((article, index) => (
-                          <li key={index}>
-                            <h3 className="is-size-5 textcolor">
-                              {article.title}
-                            </h3>
-                            <p>{article.description}</p>
-                            <a
-                              href={article.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Read more
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p>Loading...</p>
-                    )}
+                    <h2 className="is-size-3 textcolor">User Engangement</h2>
+                    <Progress2 />
                   </div>
                 </div>
               </div>

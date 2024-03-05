@@ -13,6 +13,8 @@ import Feed from "./Pages/Dashboard/Feed.jsx";
 import Transact from "./Pages/Dashboard/Transact.jsx";
 import Wallet from "./Pages/Dashboard/Wallet.jsx";
 import Profile from "./Pages/Dashboard/Profile.jsx";
+import Withdraw from "./components/withdraw.jsx";
+import Deposite from "./components/Deposite.jsx";
 
 const App = () => {
   return (
@@ -34,6 +36,8 @@ const App = () => {
           <Route path="/transaction" element={<Transact />} />
           <Route path="/wallet" element={<Wallet />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/withdraw" element={<Withdraw />} />
+          <Route path="/deposit" element={<Deposite />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>

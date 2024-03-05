@@ -24,14 +24,24 @@ const Transact = () => {
         </div>
         <div className={`navbar-menu ${isActive ? "is-active" : ""} is-size-4`}>
           <div className="navbar-start is-hidden-desktop">
-            <Link to="/dashboard" className="is-active">
+            <Link to="/dashboard" className="is-active navbar-item ">
               Dashboard
             </Link>
-            <Link to="/analytics">Analytics</Link>
-            <Link to="/feed">Feed</Link>
-            <Link to="/transaction">Transactions</Link>
-            <Link to="/wallet">Wallet</Link>
-            <Link to="/profile">Profile</Link>
+            <Link to="/analytics" className="navbar-item ">
+              Analytics
+            </Link>
+            <Link to="/feed" className="navbar-item ">
+              Feed
+            </Link>
+            <Link to="/transaction" className="navbar-item ">
+              Transactions
+            </Link>
+            <Link to="/wallet" className="navbar-item ">
+              Wallet
+            </Link>
+            <Link to="/profile" className="navbar-item ">
+              Profile
+            </Link>
           </div>
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">

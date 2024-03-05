@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 const AboutSimplified = () => {
   return (
@@ -47,9 +48,9 @@ const AboutSimplified = () => {
                 from market volatility
               </p>
 
-              <button className="button mt-6 is-medium is-link">
+              <Link to="/register" className="button mt-6 is-medium is-link">
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         </div>
