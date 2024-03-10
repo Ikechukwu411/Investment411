@@ -15,6 +15,7 @@ import Wallet from "./Pages/Dashboard/Wallet.jsx";
 import Profile from "./Pages/Dashboard/Profile.jsx";
 import Withdraw from "./components/withdraw.jsx";
 import Deposite from "./components/Deposite.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx";
 
 const App = () => {
   return (
@@ -29,16 +30,18 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
         </Routes>
-        <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/feed" element={<Feed />} />
-          <Route path="/transaction" element={<Transact />} />
-          <Route path="/wallet" element={<Wallet />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/withdraw" element={<Withdraw />} />
-          <Route path="/deposit" element={<Deposite />} />
-        </Routes>
+        <PrivateRoute>
+          <Routes>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/feed" element={<Feed />} />
+            <Route path="/transaction" element={<Transact />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/withdraw" element={<Withdraw />} />
+            <Route path="/deposit" element={<Deposite />} />
+          </Routes>
+        </PrivateRoute>
       </BrowserRouter>
     </React.Fragment>
   );

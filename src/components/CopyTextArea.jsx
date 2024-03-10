@@ -10,14 +10,14 @@ const CopyTextArea = () => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <textarea
         ref={textAreaRef}
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
       <button onClick={handleCopy}>Copy</button>
-    </div>
+    </React.Fragment>
   );
 };
 

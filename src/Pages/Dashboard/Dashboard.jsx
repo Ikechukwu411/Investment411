@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../../../Context/AuthContext";
 import "../Dashboard/Dashboard.css";
 import { Link } from "react-router-dom";
 import { FaBitcoin } from "react-icons/fa";
 import Progress2 from "./Progress2";
+import { useNavigate } from "react-router-dom";
 
 const account3 = {
   owner: "Steven Thomas Williams",
@@ -13,6 +15,17 @@ const account3 = {
 
 const Dashboard = () => {
   const [isActive, setisActive] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const logOutHandler = () => {
+    logOut()
+      .then(() => {
+        console.log("User logged out successfully");
+        navigate("/login"); // Redirect to the login page after logout
+      })
+      .catch((error) => console.error(error));
+  };
 
   return (
     <React.Fragment>
@@ -68,7 +81,7 @@ const Dashboard = () => {
                 <Link className="navbar-item" href="#">
                   Settings
                 </Link>
-                <Link className="navbar-item" href="#">
+                <Link className="navbar-item" onClick={logOutHandler}>
                   Sign Out
                 </Link>
               </div>
@@ -99,7 +112,7 @@ const Dashboard = () => {
                   <div className="column p-4">
                     <p>
                       <span className="ml-3 is-size-3">Welcome</span>
-                      <span className="ml-3 is-size-3">John</span>
+                      <span className="ml-3 is-size-3">{user.displayName}</span>
                     </p>
                     <p>Total Balance</p>
                     <h1 className="is-size-1-desktop is-size-3-mobile mt-3-mobile">
