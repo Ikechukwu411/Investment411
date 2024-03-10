@@ -30,18 +30,73 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
         </Routes>
-        <PrivateRoute>
-          <Routes>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/feed" element={<Feed />} />
-            <Route path="/transaction" element={<Transact />} />
-            <Route path="/wallet" element={<Wallet />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/withdraw" element={<Withdraw />} />
-            <Route path="/deposit" element={<Deposite />} />
-          </Routes>
-        </PrivateRoute>
+
+        <Routes>
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/analytics"
+            element={
+              <PrivateRoute>
+                <Analytics />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/feed"
+            element={
+              <PrivateRoute>
+                <Feed />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/transaction"
+            element={
+              <PrivateRoute>
+                <Transact />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/wallet"
+            element={
+              <PrivateRoute>
+                <Wallet />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <PrivateRoute>
+                <Profile />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/withdraw"
+            element={
+              <PrivateRoute>
+                <Withdraw />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/deposit"
+            element={
+              <PrivateRoute>
+                <Deposite />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
       </BrowserRouter>
     </React.Fragment>
   );
