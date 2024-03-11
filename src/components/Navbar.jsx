@@ -10,14 +10,14 @@ const navbar = () => {
         <div className="container">
           <div className="navbar-brand">
             <a href="#" className="navbar-item">
-              <label htmlFor="" className="is-size-3-desktop is-size-4-mobile">
+              <label htmlFor="" className="is-size-2-desktop is-size-3-mobile ">
                 <span>TradeHub</span>
               </label>
             </a>
             <a
               href="#"
               role="button"
-              className={`navbar-burger ${isActive ? "is-active" : ""}`}
+              className={`navbar-burger  ${isActive ? "is-active" : ""}`}
               onClick={() => {
                 setIsActive(!isActive);
               }}

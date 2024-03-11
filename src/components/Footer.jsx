@@ -10,17 +10,15 @@ const Footer = () => {
             <div className="column">
               <p className="is-size-2">TradeHub</p>
               <ul>
+                <li className="is-size-4 mb-2">Location: United Kingdom</li>
                 <li className="is-size-4 mb-2">
-                  Location: Lorem ipsum dolor sit.
+                  Phone/Text: +1(216) 425-6086, +447448319510
                 </li>
                 <li className="is-size-4 mb-2">
-                  Phone: Lorem ipsum dolor sit.
+                  Email: Tradehubconsult@gmail.com
                 </li>
                 <li className="is-size-4 mb-2">
-                  Email: Lorem ipsum dolor sit.
-                </li>
-                <li className="is-size-4 mb-2">
-                  Address: Lorem ipsum dolor sit.
+                  Address: Clowes Street, Manchester M26EG, United Kingdom
                 </li>
               </ul>
             </div>

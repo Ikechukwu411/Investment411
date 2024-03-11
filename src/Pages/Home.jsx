@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Binance from "../components/Binance.jsx";
 import "../App.css";
 import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
@@ -43,6 +44,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
+      <Binance />
       <Navbar />
       <Hero />
       <div className="jobber">
@@ -76,6 +78,7 @@ const Home = () => {
         <Offer />
       </div>
       {/* <NavbarBottom /> */}
+
       <Footer />
     </React.Fragment>
   );

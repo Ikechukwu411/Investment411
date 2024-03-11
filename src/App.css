@@ -210,6 +210,13 @@ img {
   background-color: #1565c00a;
   height: 100%;
 }
+.binance-widget-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
 
 .form > button {
   display: flex;
