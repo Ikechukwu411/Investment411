@@ -11,9 +11,7 @@ const navbar = () => {
           <div className="navbar-brand">
             <a href="#" className="navbar-item">
               <label htmlFor="" className="is-size-3-desktop is-size-4-mobile">
-                <span>Di</span>
-                <span>-</span>
-                <span>Fi</span>
+                <span>TradeHub</span>
               </label>
             </a>
             <a

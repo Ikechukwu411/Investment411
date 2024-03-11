@@ -29,23 +29,21 @@ const AboutSimplified = () => {
                 INNOVATIVE INVESTMENT COMPANY
               </h2>
               <p className="mt-4 is-size-3 is-size-4-mobile mb-4">
-                Inception in 16th Nov 2021 Di-fi has set out to disrupt the
-                Financial Investment Industry especially in relation to
-                Cryptocurrencies and Securities
+                Since its inception in 2014, TradeHub has set out to disrupt the
+                financial investment industry especially in relation to
+                cryptocurrencies and securities. At TradeHub, we specialize in
+                providing tailored investment solutions to help you achieve your
+                financial goals. Whether youre planning for retirement, saving
+                for your children's education, or looking to grow your wealth,
+                we're here to assist you every step of the way.
               </p>
               <p className="is-size-3 is-size-4-mobile mt-5">
-                Di-fi white glove boutique firm known for our high operational
-                excellence and standards. With a workforce of over 700 UNIC
-                (University of Nicosia) certified Cryptocurrency traders and
-                specialized high technology bots, we work to bridge the gap
-                between the profits of the professional trader and an amateur by
-                bringing their profit ranges at par with each other
-              </p>
-              <p className="mt-4 is-size-3 is-size-4-mobile">
-                While offering unrivaled customer service by providing
-                worry-free, cost-effective and time-saving investment models, we
-                also ensure that your investment is best secure and protected
-                from market volatility
+                TradeHub white glove boutique firm is known for our high
+                operational excellence and standards. With a workforce of over
+                700 UNIC (University of Nicosia) certified Cryptocurrency
+                traders and specialized high technology bots, we work to bridge
+                the gap between the profits of the professional trader and an
+                amateur by bringing their profit ranges at par with each other.
               </p>
 
               <Link to="/register" className="button mt-6 is-medium is-link">

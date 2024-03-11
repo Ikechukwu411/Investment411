@@ -60,7 +60,7 @@ const TabComponent = () => {
           {activeTab === "tab3" && (
             <div>
               <p className="is-size-4">
-                Our vision is to emerge as a preeminent global leader in
+                Our vision is to emerge as a pre-eminent global leader in
                 sustainable technology solutions, leveraging innovation and
                 expertise to pioneer transformative change and cultivate a more
                 equitable, prosperous, and environmentally resilient world. At

@@ -19,10 +19,10 @@ const Hero = () => {
               }}
             />
           </h1>
-          <p className="has-text-centered">
+          {/* <p className="has-text-centered">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Distinctio, quas!
-          </p>
+          </p> */}
 
           <Link to="/register" className="is-large button mt-6 is-info">
             Get Started{" "}

@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from "formik";
 import { AuthContext } from "../../Context/AuthContext";
+// import { functions } from "../../Firebase/firebaseconfig";
 
 const validate = (values) => {
   const errors = {};

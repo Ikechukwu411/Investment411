@@ -11,20 +11,22 @@ const InvestmentPlan = () => {
       <section className="section jobber">
         <div className="container has-text-centered fontsize">
           <h2 className="is-size-1 is-size-2-mobile">
-            Best Investment Plan To Accelerate Your Wealth Fast
+            Best Investment Plan To Accelerate Your Wealth
           </h2>
-          <p className="is-size-4">
+          {/* <p className="is-size-4">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste sed
             accusamus temporibus similique recusandae sint?
-          </p>
+          </p> */}
           <div className="columns mt-5">
             <div className="column box5">
               <PiGlobeStandBold size={40} color="green" />
               <h3 className="is-size-3" id="standard">
                 Standard
               </h3>
-              <p className="is-size-5">Lorem ipsum dolor sit amet.</p>
-              <h3 className="is-size-3">20%</h3>
+              <p className="is-size-5">
+                Gain at least <b>20%</b>
+              </p>
+              {/* <h3 className="is-size-3">20%</h3> */}
               <button className="button mt-2 is-info">Get Started</button>
               <ul>
                 <li className="is-size-5">
@@ -58,8 +60,10 @@ const InvestmentPlan = () => {
               <h3 className="is-size-3" id="standard">
                 Deluxe
               </h3>
-              <p className="is-size-5">Lorem ipsum dolor sit amet.</p>
-              <h3 className="is-size-3">40%</h3>
+              <p className="is-size-5">
+                Gain at least <b>40%</b>
+              </p>
+              {/* <h3 className="is-size-3">40%</h3> */}
               <button className="button mt-2 is-info">Get Started</button>
               <ul>
                 <li className="is-size-5">
@@ -93,8 +97,10 @@ const InvestmentPlan = () => {
               <h3 className="is-size-3" id="standard">
                 Premium
               </h3>
-              <p className="is-size-5">Lorem ipsum dolor sit amet.</p>
-              <h3 className="is-size-3">50%</h3>
+              <p className="is-size-5">
+                Gain at least <b>50%</b>
+              </p>
+              {/* <h3 className="is-size-3">50%</h3> */}
               <button className="button mt-2 is-info">Get Started</button>
               <ul>
                 <li className="is-size-5">

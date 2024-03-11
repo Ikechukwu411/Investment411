@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <p className="is-size-2">Di-fi</p>
+              <p className="is-size-2">TradeHub</p>
               <ul>
                 <li className="is-size-4 mb-2">
                   Location: Lorem ipsum dolor sit.
@@ -33,7 +33,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="column">
-              <p className="is-size-2">More Solutions From Di-fi</p>
+              <p className="is-size-2">More Solutions From TradeHub</p>
               <ul>
                 <li className="is-size-4 mb-2">Real-Estate</li>
                 <li className="is-size-4 mb-2">Banking</li>

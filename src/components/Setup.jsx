@@ -17,32 +17,28 @@ const Setup = () => {
               <SiGnuprivacyguard size={30} color="green" />
               <p className="is-size-2">Sign Up</p>
               <p className="is-size-4-mobile is-size-3-desktop">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Provident, reiciendis.
+                Register to begin your journey with us.
               </p>
             </div>
             <div className="column box1">
               <MdOutlinePhonelinkSetup size={30} color="orange" />
               <p className="is-size-2">Set Up Your Wallet</p>
               <p className="is-size-4-mobile is-size-3-desktop">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-                earum?.
+                Create a wallet today.
               </p>
             </div>
             <div className="column box1">
               <RiLuggageDepositLine size={30} color="blue" />
               <p className="is-size-2">Deposit</p>
               <p className="is-size-4-mobile is-size-3-desktop">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tempora, repellendus!.
+                Explore our various deposit options.
               </p>
             </div>
             <div className="column box1">
               <MdOutlinePayments size={30} color="gray" />
               <p className="is-size-2">Earn</p>
               <p className="is-size-4-mobile is-size-3-desktop">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-                nesciunt..
+                Earn with us today.
               </p>
             </div>
           </div>

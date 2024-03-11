@@ -10,15 +10,15 @@ const Roots = () => {
             Take advantage of proven solutions to achieve cryptocoin success
           </h2>
           <p className="has-text-centered is-size-4">
-            Our roots go back to 2010 - right around the beginning of the
+            Our roots go back to 2014 - right around the beginning of the
             revolution that would become known today as Bitcoin. Following the
             boom of this industry, we quickly began to see some of the common
             issues that were present when people tried to become involved. We
-            took this need into account along with our own personal ambition to
-            develop an integrated platform that was able to both satisfy the
-            needs of investors and meet their expectations with sufficient
-            returns on their investments. Since then, we have maintained our
-            focus as a company that looks towards the future and transforms the
+            took this need into account along with our goals to develop an
+            integrated platform that was able to both satisfy the needs of
+            investors and meet their expectations with sufficient returns on
+            their investments. Since then, we have maintained our focus as a
+            company that looks towards the future and transforms the
             opportunities offered to our valued clients.
           </p>
           <div className="columns mt-6">
