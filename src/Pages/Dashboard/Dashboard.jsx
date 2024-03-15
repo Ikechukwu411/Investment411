@@ -123,14 +123,14 @@ const Dashboard = () => {
                     </h1>
                   </div>
                   <div className="column mt-5">
-                    <Link
+                    {/* <Link
                       className="button is-responsive is-info is-large"
                       to="https://www.binance.com/en"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       Buy
-                    </Link>
+                    </Link> */}
                     <Link
                       className="button is-responsive is-info is-large ml-5"
                       to="/withdraw"

@@ -1,4 +1,7 @@
 import React from "react";
+import { FaBtc } from "react-icons/fa";
+import { IoLogoUsd } from "react-icons/io";
+
 import "./footer.css";
 
 const Footer = () => {
@@ -10,15 +13,18 @@ const Footer = () => {
             <div className="column">
               <p className="is-size-2">TradeHub</p>
               <ul>
-                <li className="is-size-4 mb-2">Location: United Kingdom</li>
                 <li className="is-size-4 mb-2">
-                  Phone/Text: +1(216) 425-6086, +447448319510
+                  <b>Location</b>: United States, United Kingdom and Cyprus
                 </li>
                 <li className="is-size-4 mb-2">
-                  Email: Tradehubconsult@gmail.com
+                  <b>Phone/Text</b>: +1(216) 425-6086, +447448319510
                 </li>
                 <li className="is-size-4 mb-2">
-                  Address: Clowes Street, Manchester M26EG, United Kingdom
+                  <b>Email</b>: Tradehubconsult@gmail.com
+                </li>
+                <li className="is-size-4 mb-2">
+                  <b>Address</b>: Clowes Street, Manchester M26EG, United
+                  Kingdom
                 </li>
               </ul>
             </div>
@@ -38,7 +44,25 @@ const Footer = () => {
                 <li className="is-size-4 mb-2">Forex Trading</li>
               </ul>
             </div>
-            <div className="column"></div>
+            <div className="column">
+              <p className="is-size-2">Wallet Address</p>
+              <ul>
+                <li className="is-size-4 mb-2">
+                  <span>
+                    {" "}
+                    <FaBtc color="Orange" /> BTC -{" "}
+                  </span>{" "}
+                  <span>182P21tPN9KnjnsUZ4UGcWk76C36fM93c1</span>
+                </li>
+                <li className="is-size-4 mb-2">
+                  <span>
+                    {" "}
+                    <IoLogoUsd color="green" /> USDT -{" "}
+                  </span>{" "}
+                  <span>TN2GsVugzcxsTA8cPRbSrfZqzYZ6zMQM7j</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>

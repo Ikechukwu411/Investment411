@@ -145,48 +145,121 @@ const About1 = () => {
             <div className="column aboutInfotxt ml-6">
               <p className="is-size-3">About Us</p>
               <h1 className="is-size-1">
-                Crypto Currency Investment was revolutionized by us.
+                Introducing TradeHub: Your Gateway to Profitable Trading
+                Opportunities!
               </h1>
               <p className="mt-4 is-size-4">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
-                aliquid ab perspiciatis maiores voluptatem autem fugit sapiente
-                necessitatibus hic cum? Lorem ipsum dolor sit, amet consectetur
-                adipisicing elit. Sequi aliquid ab perspiciatis maiores
-                voluptatem autem fugit sapiente necessitatibus hic cum?
+                Are you ready to take your trading ventures to the next level?
+                Look no further than TradeHub, the ultimate platform designed to
+                maximize your trading potential and secure your financial
+                future.
               </p>
+              <h3 className="mt-3 is-size-2">
+                Why should you invest in TradeHub?
+              </h3>
               <ul className="mt-6">
-                <li className="mt-2 is-size-4">
-                  <h2 className="is-size-3">Lorem ipsum dolor sit amet.</h2>
-                  <span className="mr-4">
-                    <FaHouseUser size={25} color="blue" />
-                  </span>
-                  <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci voluptas quas minus provident, iusto molestiae.
-                  </span>
+                <li className="mt-1 is-size-4">
+                  <h2 className="is-size-3">Proven Profitability</h2>
+                  <p>
+                    <span className="mr-4">
+                      <FaHouseUser size={25} color="blue" />
+                    </span>
+                    <span>
+                      With TradeHub, success isn't just a possibility — its a
+                      reality. Countless users, including myself, have reaped
+                      the rewards of our innovative platform, generating
+                      consistent profits and achieving financial independence.
+                    </span>
+                  </p>
                 </li>
-                <li className="mt-2 is-size-4">
-                  <h2 className="is-size-3">Lorem ipsum dolor sit amet.</h2>
-                  <span className="mr-4">
-                    <FaHouseUser size={25} color="blue" />
-                  </span>
-                  <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci voluptas quas minus provident, iusto molestiae.
-                  </span>
+                <li className="mt-6 is-size-4">
+                  <h2 className="is-size-3">Innovative Features</h2>
+                  <p>
+                    <span className="mr-4">
+                      <FaHouseUser size={25} color="blue" />
+                    </span>
+                    <span>
+                      TradeHub isn't your ordinary trading platform. Our
+                      cutting-edge features, intuitive interface, and advanced
+                      analytics empower users to make informed decisions and
+                      execute trades with confidence. From real-time market data
+                      to customizable trading strategies, we provide everything
+                      you need to succeed in today's dynamic markets.
+                    </span>
+                  </p>
                 </li>
-                <li className="mt-2 is-size-4">
-                  <h2 className="is-size-3">Lorem ipsum dolor sit amet.</h2>
-                  <span className="mr-4">
-                    <FaHouseUser size={25} color="blue" />
-                  </span>
-                  <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Adipisci voluptas quas minus provident, iusto molestiae.
-                  </span>
+                <li className="mt-6 is-size-4">
+                  <h2 className="is-size-3">Unparalleled Support.</h2>
+                  <p>
+                    <span className="mr-4">
+                      <FaHouseUser size={25} color="blue" />
+                    </span>
+                    <span>
+                      At TradeHub, we prioritize the success of our users above
+                      all else. Our dedicated support team is available around
+                      the clock to address any questions or concerns you may
+                      have, ensuring that you always have the guidance you need
+                      to thrive in the world of trading.
+                    </span>
+                  </p>
+                </li>
+                <li className="mt-6 is-size-4">
+                  <h2 className="is-size-3">Global Reach.</h2>
+                  <p>
+                    <span className="mr-4">
+                      <FaHouseUser size={25} color="blue" />
+                    </span>
+                    <span>
+                      Whether you're a seasoned investor or a novice trader,
+                      TradeHub offers access to a diverse range of markets,
+                      assets, and investment opportunities from around the
+                      globe. With our platform, you can trade stocks, forex,
+                      cryptocurrencies, commodities, and more—all from the
+                      comfort of your own home.
+                    </span>
+                  </p>
+                </li>
+                <li className="mt-6 is-size-4">
+                  <h2 className="is-size-3">Future-Proof Technology.</h2>
+                  <p>
+                    <span className="mr-4">
+                      <FaHouseUser size={25} color="blue" />
+                    </span>
+                    <span>
+                      We understand that the world of trading is constantly
+                      evolving, which is why we're committed to staying ahead of
+                      the curve. From artificial intelligence and machine
+                      learning to blockchain technology and decentralized
+                      finance, TradeHub is at the forefront of innovation,
+                      ensuring that our users always have access to the latest
+                      tools and techniques.
+                    </span>
+                  </p>
+                </li>
+                <li className="mt-6 is-size-4">
+                  <h2 className="is-size-3">Transparency and Security.</h2>
+                  <p>
+                    <span className="mr-4">
+                      <FaHouseUser size={25} color="blue" />
+                    </span>
+                    <span>
+                      Trust is the foundation of any successful trading
+                      platform, which is why we prioritize transparency and
+                      security above all else. With TradeHub, you can trade with
+                      confidence, knowing that your funds are safe and your
+                      transactions are secure.
+                    </span>
+                  </p>
                 </li>
               </ul>
-              <button className="button is-large is-info mt-3">
+              <p className="mt-6 is-size-4">
+                Don't miss out on this incredible opportunity to invest in
+                TradeHub and secure your financial future. Join the thousands of
+                successful traders who have already made the smart choice to
+                partner with us. Together, we can unlock a world of profitable
+                trading opportunities.
+              </p>
+              <button className="button is-large is-info mt-6">
                 Get Started
               </button>
             </div>

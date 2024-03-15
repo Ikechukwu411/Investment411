@@ -14,6 +14,8 @@ import InvestmentPlan from "../components/InvestmentPlan.jsx";
 import FourthSection from "../components/FourthSection.jsx";
 import Roots from "../components/Roots.jsx";
 import TabComponent from "../components/Tab.jsx";
+import Payment from "../components/Payment.jsx";
+import ScrollToTop from "../components/ScrollToTop.jsx";
 
 const Home = () => {
   useEffect(() => {
@@ -68,6 +70,9 @@ const Home = () => {
       <div className="jobber">
         <FourthSection />
       </div>
+      <div>
+        <Payment />
+      </div>
       <div className="jobber">
         <Certify1 />
       </div>
@@ -78,7 +83,7 @@ const Home = () => {
         <Offer />
       </div>
       {/* <NavbarBottom /> */}
-
+      <ScrollToTop />
       <Footer />
     </React.Fragment>
   );
