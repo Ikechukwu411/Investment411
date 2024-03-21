@@ -7,6 +7,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from "formik";
 import { AuthContext } from "../../Context/AuthContext";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../Firebase/firebaseconfig";
+import emailjs from "@emailjs/browser";
 
 const validate = (values) => {
   const errors = {};
@@ -60,18 +63,46 @@ const RegisterForm = () => {
     onSubmit: async (values, { resetForm }) => {
       resetForm({ values: "" });
       try {
-        createUser(values.email, values.password).then((result) => {
-          updateProfile(result.user, {
-            displayName: values.firstname,
-          });
-          console.log(result);
-          toast.success("signup Successful", {
-            autoClose: 3000,
-          });
-          setTimeout(() => {
-            navigate("/login");
-          }, 3000);
+        const result = await createUser(values.email, values.password);
+        await updateProfile(result.user, {
+          displayName: values.firstname,
         });
+
+        // Add user details to Firestore
+        const userDetails = {
+          firstname: values.firstname,
+          lastname: values.lastname,
+          email: values.email,
+          amount: 0,
+          userId: result.user.uid, // User ID from Firebase Auth
+        };
+
+        // Add user details to Firestore collection
+        await addDoc(collection(db, "users"), userDetails);
+
+        console.log(result);
+        toast.success("Signup Successful", {
+          autoClose: 3000,
+        });
+        setTimeout(() => {
+          navigate("/login");
+        }, 3000);
+
+        const serviceId = "service_w1e1fwc";
+        const templateId = "template_cumf88j";
+        const publicKey = "DlG3U4EeyORAHfYlA";
+
+        const templateParams = {
+          from_name: values.firstname,
+          from_email: values.email,
+          to_name: "Admin",
+        };
+
+        emailjs
+          .send(serviceId, templateId, templateParams, publicKey)
+          .then((response) => {
+            console.log("email sent successfully", response);
+          });
       } catch (error) {
         console.log(error);
       }

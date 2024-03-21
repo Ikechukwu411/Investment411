@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../Dashboard/Dashboard.css";
 import { Link } from "react-router-dom";
+import "../Dashboard/Dashboard.css";
 
 const Wallet = () => {
   const [isActive, setisActive] = useState(false);
@@ -27,15 +28,7 @@ const Wallet = () => {
             <Link to="/dashboard" className="is-active navbar-item ">
               Dashboard
             </Link>
-            <Link to="/analytics" className="navbar-item ">
-              Analytics
-            </Link>
-            <Link to="/feed" className="navbar-item ">
-              Feed
-            </Link>
-            <Link to="/transaction" className="navbar-item ">
-              Transactions
-            </Link>
+
             <Link to="/wallet" className="navbar-item ">
               Wallet
             </Link>
@@ -72,9 +65,6 @@ const Wallet = () => {
             <aside className="menu pl-3 pt-6 is-size-4">
               <div className="menu-list">
                 <Link to="/dashboard">Dashboard</Link>
-                <Link to="/analytics">Analytics</Link>
-                <Link to="/feed">Feed</Link>
-                <Link to="/transaction">Transactions</Link>
                 <Link to="/wallet" className="is-active">
                   Wallet
                 </Link>

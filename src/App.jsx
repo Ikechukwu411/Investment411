@@ -8,9 +8,6 @@ import Frequent from "./Pages/FAQ.jsx";
 import Login from "./Pages/Login.jsx";
 import Register from "./Pages/Register.jsx";
 import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
-import Analytics from "./Pages/Dashboard/Analytics.jsx";
-import Feed from "./Pages/Dashboard/Feed.jsx";
-import Transact from "./Pages/Dashboard/Transact.jsx";
 import Wallet from "./Pages/Dashboard/Wallet.jsx";
 import Profile from "./Pages/Dashboard/Profile.jsx";
 import Withdraw from "./components/withdraw.jsx";
@@ -56,6 +53,7 @@ const App = () => {
               <Route path="Frequent" element={<Frequent />} />
               <Route path="login" element={<Login />} />
               <Route path="register" element={<Register />} />
+              <Route path="/@tr2fd7685adminuser" element={<AdminDashboard />} />
             </Routes>
 
             <Routes>
@@ -67,30 +65,7 @@ const App = () => {
                   </PrivateRoute>
                 }
               />
-              <Route
-                path="/analytics"
-                element={
-                  <PrivateRoute>
-                    <Analytics />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/feed"
-                element={
-                  <PrivateRoute>
-                    <Feed />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/transaction"
-                element={
-                  <PrivateRoute>
-                    <Transact />
-                  </PrivateRoute>
-                }
-              />
+
               <Route
                 path="/wallet"
                 element={
@@ -123,7 +98,6 @@ const App = () => {
                   </PrivateRoute>
                 }
               />
-              <Route path="/@7685adminuser" element={<AdminDashboard />} />
             </Routes>
           </BrowserRouter>
         </div>

@@ -1,22 +1,46 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../../../Context/AuthContext";
 import "../Dashboard/Dashboard.css";
 import { Link } from "react-router-dom";
-import { FaBitcoin } from "react-icons/fa";
-import Progress2 from "./Progress2";
 import { useNavigate } from "react-router-dom";
-
-const account3 = {
-  owner: "Steven Thomas Williams",
-  movements: [200, -200, 340, -300, -20, 50, 400, -460],
-  interestRate: 0.7,
-  pin: 3333,
-};
+import { getDocs, collection } from "firebase/firestore";
+import { db } from "../../../Firebase/firebaseconfig";
+import USA from "../../assets/round-removebg-preview.png";
+import { IoIosSend } from "react-icons/io";
+import { GoArrowDownLeft } from "react-icons/go";
+import { FaPlus } from "react-icons/fa6";
+import { BiMoneyWithdraw } from "react-icons/bi";
 
 const Dashboard = () => {
   const [isActive, setisActive] = useState(false);
   const { user, logOut } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [totalBalance, setTotalBalance] = useState();
+  console.log(user.email);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        // Query the users collection for the document where userId matches user.uid
+        const querySnapshot = await getDocs(collection(db, "users"));
+        querySnapshot.forEach((doc) => {
+          const userData = doc.data();
+          if (userData.userId === user.uid) {
+            // Found the document for the current user
+            setTotalBalance(userData.amount);
+            return; // Exit the loop since we found the document
+          }
+        });
+      } catch (error) {
+        console.error("Error fetching user data: ", error);
+      }
+    };
+
+    // Call fetchUserData when the component mounts or when user changes
+    if (user) {
+      fetchUserData();
+    }
+  }, [user]);
 
   const logOutHandler = () => {
     logOut()
@@ -50,14 +74,8 @@ const Dashboard = () => {
             <Link to="/dashboard" className="is-active navbar-item ">
               Dashboard
             </Link>
-            <Link to="/analytics" className="navbar-item ">
-              Analytics
-            </Link>
             <Link to="/feed" className="navbar-item ">
               Feed
-            </Link>
-            <Link to="/transaction" className="navbar-item ">
-              Transactions
             </Link>
             <Link to="/wallet" className="navbar-item ">
               Wallet
@@ -68,14 +86,7 @@ const Dashboard = () => {
           </div>
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">
-                <img
-                  src="./Images/Loan.jpg"
-                  alt="User"
-                  width="28"
-                  height="28"
-                />
-              </a>
+              <a className="navbar-link">User</a>
 
               <div className="navbar-dropdown">
                 <Link className="navbar-item" href="#">
@@ -97,117 +108,77 @@ const Dashboard = () => {
                 <Link to="/dashboard" className="is-active">
                   Dashboard
                 </Link>
-                <Link to="/analytics">Analytics</Link>
-                <Link to="/feed">Feed</Link>
-                <Link to="/transaction">Transactions</Link>
                 <Link to="/wallet">Wallet</Link>
                 <Link to="/profile">Profile</Link>
               </div>
             </aside>
           </div>
           <div className="column is-four-fifths bigColumn">
-            <div className="container dasboardcontainer">
-              <div className="box graph">
-                <div className="columns">
-                  <div className="column p-4">
-                    <p>
-                      <span className="ml-3 is-size-3">Welcome</span>
-                      <span className="ml-3 is-size-3">{user.displayName}</span>
-                    </p>
-                    <p>Total Balance</p>
-                    <h1 className="is-size-1-desktop is-size-3-mobile mt-3-mobile">
-                      $0 - USD
-                      <span className="ml-3">
-                        <FaBitcoin color="orange" size={45} />
-                      </span>
-                    </h1>
-                  </div>
-                  <div className="column mt-5">
-                    {/* <Link
-                      className="button is-responsive is-info is-large"
-                      to="https://www.binance.com/en"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Buy
-                    </Link> */}
-                    <Link
-                      className="button is-responsive is-info is-large ml-5"
-                      to="/withdraw"
-                    >
-                      Withdraw
-                    </Link>
-                    <Link
-                      className="button is-responsive is-info is-large ml-5"
-                      to="/deposit"
-                    >
-                      Deposit
-                    </Link>
-                    <button
-                      disabled
-                      className="button  is-responsive mt-6-mobile is-info is-large ml-2"
-                    >
-                      Loan
-                    </button>
-                  </div>
+            <div className="container dasboardcontainer"></div>
+
+            <div className="container auto">
+              <div className="columns is-flex is-mobile is-justify-content-flex-end">
+                <div className="column">
+                  <p className="is-size-4 has-text-weight-bold">Wallet</p>
+                </div>
+                <div className="column">
+                  <p className="is-size-4 has-text-weight-bold">
+                    <span>Welcome - </span>
+                    <span>{user.displayName}</span>
+                  </p>
                 </div>
               </div>
-              <div className="box tags"></div>
-              <div className="columns mt-4 box">
-                <div className="column is-half ">
-                  <h2 className="is-size-3 textcolor">Transactions History</h2>
-                  <div className="">
-                    <table className="table is-fullwidth">
-                      <thead>
-                        <tr>
-                          <th className="  is-size-4 textcolor">
-                            Deposit/withdraw
-                          </th>
-                          <th className=" is-size-4 textcolor">Amount</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            {account3.movements.map((mov, index) => {
-                              return (
-                                <li
-                                  key={index}
-                                  className={`is-size-4 m-2 ${
-                                    mov > 0 ? "bggray" : "white"
-                                  }`}
-                                >
-                                  {mov}
-                                </li>
-                              );
-                            })}
-                          </td>
-                          <td>
-                            {account3.movements.map((mov, index) => {
-                              const transactionType =
-                                mov > 0 ? "deposited" : "withdraw";
-                              return (
-                                <li
-                                  key={index}
-                                  className={`is-size-4 m-2 ${
-                                    mov > 0 ? "bggray" : "white"
-                                  }`}
-                                >
-                                  {transactionType}
-                                </li>
-                              );
-                            })}
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+            </div>
+            <div className="container box boxshadow">
+              <div className="columns is-flex is-mobile justify-content-between">
+                <div className="column is-four-fifths">
+                  <p>USD Balance</p>
+                  <h1 className="is-size-3 has-text-weight-bold">
+                    ${totalBalance}.00 USD
+                  </h1>
                 </div>
-                <div className="column is-half">
-                  <div>
-                    <h2 className="is-size-3 textcolor">User Engangement</h2>
-                    <Progress2 />
-                  </div>
+                <div className="column ">
+                  <img src={USA} width={50} />
+                </div>
+              </div>
+              <hr></hr>
+              <div className="columns is-flex is-mobile justify-content-between">
+                <div className="column ">
+                  <span className="flag2">
+                    <IoIosSend color="blue" size={20} />
+                  </span>
+                  <p>Send</p>
+                </div>
+                <div className="column">
+                  <span className="flag2">
+                    <GoArrowDownLeft color="blue" size={20} />
+                  </span>
+                  <p>Recieve</p>
+                </div>
+                <Link className="column has-text-white" to="/deposit">
+                  <span className="flag2">
+                    <FaPlus color="blue" size={20} />
+                  </span>
+                  <p>Deposit</p>
+                </Link>
+                <Link className="column has-text-white" to="/withdraw">
+                  <span className="flag2">
+                    <BiMoneyWithdraw color="blue" size={20} />
+                  </span>
+                  <p>Withdraw</p>
+                </Link>
+              </div>
+              <button className="button is-fullwidth btn23">
+                View transactions
+              </button>
+            </div>
+            <div className="container box boxshadow1 loan">
+              <div className="columns is-flex is-mobile justify-content-between mt-2">
+                <div className="column is-four-fifths">
+                  <p className="is-size-4 has-text-bold ">Loan</p>
+                </div>
+                <div className="column clip">
+                  <p>New</p>
                 </div>
               </div>
             </div>

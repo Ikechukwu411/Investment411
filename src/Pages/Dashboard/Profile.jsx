@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { AuthContext } from "../../../Context/AuthContext";
 import "../Dashboard/Dashboard.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const [isActive, setisActive] = useState(false);
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const logOutHandler = () => {
+    logOut()
+      .then(() => {
+        console.log("User logged out successfully");
+        navigate("/login"); // Redirect to the login page after logout
+      })
+      .catch((error) => console.error(error));
+  };
   return (
     <React.Fragment>
       <nav className="navbar is-fixed-top">
@@ -27,38 +40,25 @@ const Profile = () => {
             <Link to="/dashboard" className="is-active navbar-item ">
               Dashboard
             </Link>
-            <Link to="/analytics" className="navbar-item ">
-              Analytics
-            </Link>
-            <Link to="/feed" className="navbar-item ">
-              Feed
-            </Link>
-            <Link to="/transaction" className="navbar-item ">
-              Transactions
-            </Link>
             <Link to="/wallet" className="navbar-item ">
-              Wallet
+              My Wallet
             </Link>
             <Link to="/profile" className="navbar-item ">
               Profile
             </Link>
+            <Link to="/help" className="navbar-item ">
+              Help
+            </Link>
           </div>
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">
-                <img
-                  src="./Images/Loan.jpg"
-                  alt="User"
-                  width="28"
-                  height="28"
-                />
-              </a>
+              <a className="navbar-link">User</a>
 
               <div className="navbar-dropdown">
                 <Link className="navbar-item" href="#">
                   Settings
                 </Link>
-                <Link className="navbar-item" href="#">
+                <Link className="navbar-item" onClick={logOutHandler}>
                   Sign Out
                 </Link>
               </div>
@@ -72,9 +72,6 @@ const Profile = () => {
             <aside className="menu pl-3 pt-6 is-size-4">
               <div className="menu-list">
                 <Link to="/dashboard">Dashboard</Link>
-                <Link to="/analytics">Analytics</Link>
-                <Link to="/feed">Feed</Link>
-                <Link to="/transaction">Transactions</Link>
                 <Link to="/wallet">Wallet</Link>
                 <Link to="/profile" className="is-active">
                   Profile
