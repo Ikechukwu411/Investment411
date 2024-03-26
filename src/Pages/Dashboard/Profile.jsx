@@ -41,9 +41,9 @@ const Profile = () => {
             <Link to="/dashboard" className="is-active navbar-item ">
               Dashboard
             </Link>
-            <Link to="/wallet" className="navbar-item ">
+            {/* <Link to="/wallet" className="navbar-item ">
               My Wallet
-            </Link>
+            </Link> */}
             <Link to="/profile" className="navbar-item ">
               Profile
             </Link>

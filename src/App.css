@@ -202,7 +202,7 @@ img {
 .login-container {
   background-color: white;
   border: 1px solid rgba(128, 128, 128, 0.298);
-  width: 100%;
+  /* width: 100%; */
   margin: 10rem auto;
   max-width: 480px;
   position: relative;
@@ -355,4 +355,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.reset {
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
 }

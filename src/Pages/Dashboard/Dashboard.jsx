@@ -72,7 +72,7 @@ const Dashboard = () => {
       setShowModal(true);
       localStorage.setItem("showErrorMessage", JSON.stringify(true));
       localStorage.setItem("showModal", JSON.stringify(true));
-    }, 5000);
+    }, 15 * 60 * 1000);
   };
 
   const clearError = () => {
@@ -133,12 +133,12 @@ const Dashboard = () => {
             <Link to="/help" className="navbar-item ">
               Help
             </Link>
-            <Link to="/wallet" className="navbar-item ">
+            {/* <Link to="/wallet" className="navbar-item ">
               Wallet
-            </Link>
-            <Link to="/profile" className="navbar-item ">
+            </Link> */}
+            {/* <Link to="/profile" className="navbar-item ">
               Profile
-            </Link>
+            </Link> */}
           </div>
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
@@ -165,8 +165,8 @@ const Dashboard = () => {
                   Dashboard
                 </Link>
                 <Link to="/help">Help</Link>
-                <Link to="/wallet">Wallet</Link>
-                <Link to="/profile">Profile</Link>
+                {/* <Link to="/wallet">Wallet</Link> */}
+                {/* <Link to="/profile">Profile</Link> */}
               </div>
             </aside>
           </div>

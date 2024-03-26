@@ -17,6 +17,7 @@ import DotLoader from "react-spinners/DotLoader.js";
 import AdminDashboard from "./Pages/Dashboard/AdminDashboard.jsx";
 import TransactionPage from "./Pages/Dashboard/TransactionPage.jsx";
 import Help from "./Pages/Dashboard/Help.jsx";
+import ResetPassword from "./components/ResetPassword.jsx";
 
 const override = {
   display: "block",
@@ -56,6 +57,7 @@ const App = () => {
               <Route path="login" element={<Login />} />
               <Route path="register" element={<Register />} />
               <Route path="/@tr2fd7685adminuser" element={<AdminDashboard />} />
+              <Route path="/resetpassword" element={<ResetPassword />} />
             </Routes>
 
             <Routes>
@@ -76,14 +78,14 @@ const App = () => {
                   </PrivateRoute>
                 }
               />
-              <Route
-                path="/profile"
+              {/* <Route
+                path="/resetpassword"
                 element={
                   <PrivateRoute>
-                    <Profile />
+                    <ResetPassword />
                   </PrivateRoute>
                 }
-              />
+              /> */}
               <Route
                 path="/withdraw"
                 element={

@@ -51,12 +51,6 @@ const Help = () => {
             <Link to="/help" className="navbar-item ">
               Help
             </Link>
-            <Link to="/wallet" className="navbar-item ">
-              Wallet
-            </Link>
-            <Link to="/profile" className="navbar-item ">
-              Profile
-            </Link>
           </div>
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
@@ -83,8 +77,8 @@ const Help = () => {
                 <Link to="/help" className="is-active">
                   Help
                 </Link>
-                <Link to="/wallet">Wallet</Link>
-                <Link to="/profile">Profile</Link>
+                {/* <Link to="/wallet">Wallet</Link> */}
+                {/* <Link to="/profile">Profile</Link> */}
               </div>
             </aside>
           </div>

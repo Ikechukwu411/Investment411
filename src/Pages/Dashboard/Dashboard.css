@@ -39,14 +39,13 @@ aside {
 .something1 {
   height: 50vh;
   width: 100%;
-  max-width: 400px;
-  width: 250px;
+  text-align: center;
   margin-top: 2rem;
+  padding-top: 3rem;
   display: grid;
   align-items: center;
   justify-content: center;
   color: black;
-  padding: 2rem;
 }
 .addup {
   padding-left: 1rem;
