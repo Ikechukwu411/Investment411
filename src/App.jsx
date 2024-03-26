@@ -15,6 +15,8 @@ import Deposite from "./components/Deposite.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
 import DotLoader from "react-spinners/DotLoader.js";
 import AdminDashboard from "./Pages/Dashboard/AdminDashboard.jsx";
+import TransactionPage from "./Pages/Dashboard/TransactionPage.jsx";
+import Help from "./Pages/Dashboard/Help.jsx";
 
 const override = {
   display: "block",
@@ -95,6 +97,22 @@ const App = () => {
                 element={
                   <PrivateRoute>
                     <Deposite />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/transactionlist"
+                element={
+                  <PrivateRoute>
+                    <TransactionPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/help"
+                element={
+                  <PrivateRoute>
+                    <Help />
                   </PrivateRoute>
                 }
               />

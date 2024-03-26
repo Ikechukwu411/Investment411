@@ -3,6 +3,7 @@ import { AuthContext } from "../../../Context/AuthContext";
 import "../Dashboard/Dashboard.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import TradeLogo from "../../assets/SA (2).png";
 
 const Profile = () => {
   const [isActive, setisActive] = useState(false);
@@ -22,7 +23,7 @@ const Profile = () => {
       <nav className="navbar is-fixed-top">
         <div className="navbar-brand">
           <a className="navbar-item">
-            <p className="logo is-size-4-desktop is-size-3-mobile">DI-FI</p>
+            <img src={TradeLogo} alt="" />
           </a>
 
           <a

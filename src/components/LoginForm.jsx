@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 import "../App.css";
@@ -26,6 +26,7 @@ const validate = (values) => {
 const LoginForm = () => {
   const { loginUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [error, setError] = useState(null);
 
   const formik = useFormik({
     initialValues: {
@@ -33,29 +34,58 @@ const LoginForm = () => {
       password: "",
     },
     validate,
-    onSubmit: (values, { resetForm }) => {
-      // console.log(values);
+    onSubmit: async (values, { resetForm }) => {
       resetForm({ values: "" });
       try {
-        loginUser(values.email, values.password).then((result) => {
-          console.log(result);
-          toast.success("login Successful", {
-            autoClose: 3000,
-          });
-          setTimeout(() => {
-            navigate("/dashboard");
-          }, [3000]);
+        await loginUser(values.email, values.password);
+        toast.success("Login Successful", {
+          autoClose: 3000,
         });
+        setTimeout(() => {
+          navigate("/dashboard");
+        }, 3000);
       } catch (error) {
-        toast.error("Check Your Password.");
-        console.log(error);
+        if (error.code === "auth/user-not-found") {
+          setError("User not found. Please check your email.");
+        } else if (error.code === "auth/wrong-password") {
+          setError("Incorrect password. Please try again.");
+        } else {
+          setError("An error occurred. Please try again later.");
+        }
+        console.error(error);
       }
     },
+
+    // onSubmit: (values, { resetForm }) => {
+    //   // console.log(values);
+    //   resetForm({ values: "" });
+    //   try {
+    //     loginUser(values.email, values.password).then((result) => {
+    //       console.log(result);
+    //       toast.success("login Successful", {
+    //         autoClose: 3000,
+    //       });
+    //       setTimeout(() => {
+    //         navigate("/dashboard");
+    //       }, [3000]);
+    //     });
+    //   } catch (error) {
+    //     if (error.code === "auth/user-not-found") {
+    //       setError("User not found. Please check your email.");
+    //     } else if (error.code === "auth/wrong-password") {
+    //       setError("Incorrect password. Please try again.");
+    //     } else {
+    //       setError("An error occurred. Please try again later.");
+    //     }
+    //     console.error(error);
+    //   }
+    // },
   });
 
   return (
     <React.Fragment>
       <ToastContainer />
+      {error && <div className="error">{error}</div>}
       <form onSubmit={formik.handleSubmit} className="form" id="form">
         <div className="field">
           <label className="label is-size-4">Email</label>
@@ -70,7 +100,9 @@ const LoginForm = () => {
               value={formik.values.email}
             />
           </div>
-          <div className="error"></div>
+          {formik.touched.email && formik.errors.email && (
+            <div className="error">{formik.errors.email}</div>
+          )}
         </div>
         <div className="field">
           <label className="label is-size-4">Password</label>
@@ -85,7 +117,9 @@ const LoginForm = () => {
               value={formik.values.password}
             />
           </div>
-          <div className="error"></div>
+          {formik.touched.password && formik.errors.password && (
+            <div className="error">{formik.errors.password}</div>
+          )}
         </div>
         <div className="has-text-centered">
           <p className="is-size-4 mb-3">

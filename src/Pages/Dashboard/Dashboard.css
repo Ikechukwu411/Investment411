@@ -3,11 +3,75 @@ aside {
   height: 100vh;
   border-right: 2px solid #13182c;
 }
+.errormessage {
+  background-color: white;
+  color: white;
+  height: 60vh;
+  font-weight: 500px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  width: 100%;
+  max-width: 400px;
+  width: 250px;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.something {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+  max-width: 400px;
+  width: 250px;
+  background-color: rgb(199, 6, 6);
+  padding-top: 2rem;
+  padding-left: 1rem;
+  display: flex;
+}
+.danger {
+  background-color: rgb(199, 6, 6);
+  color: white;
+}
+.something1 {
+  height: 50vh;
+  width: 100%;
+  max-width: 400px;
+  width: 250px;
+  margin-top: 2rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  padding: 2rem;
+}
+.addup {
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
 
+.showmodal {
+  width: 100%;
+  height: 100%;
+  background-color: #13182c9f;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 998;
+}
 .navbar,
 .menu {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid #13182c;
+}
+.transactions {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .menu-list a {
@@ -44,11 +108,7 @@ aside {
   background-position: bottom;
   margin: 2rem auto;
 }
-/* .tag {
-  width: 90%;
-  height: 20rem;
-  margin: 4rem auto;
-} */
+
 .transaction {
   margin-top: 7rem;
 }
@@ -109,4 +169,18 @@ td > li {
   color: white;
   font-weight: bold;
   clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 13% 100%, 0 48%, 15% 0);
+}
+
+.arrowcircle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: blue;
+}
+.boxcall {
+  margin: auto 1rem;
+  margin-top: 2rem;
 }

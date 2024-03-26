@@ -10,12 +10,16 @@ import { IoIosSend } from "react-icons/io";
 import { GoArrowDownLeft } from "react-icons/go";
 import { FaPlus } from "react-icons/fa6";
 import { BiMoneyWithdraw } from "react-icons/bi";
+import TradeLogo from "../../assets/SA (2).png";
+import { MdOutlineCircleNotifications } from "react-icons/md";
 
 const Dashboard = () => {
   const [isActive, setisActive] = useState(false);
   const { user, logOut } = useContext(AuthContext);
   const navigate = useNavigate();
   const [totalBalance, setTotalBalance] = useState();
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   console.log(user.email);
 
   useEffect(() => {
@@ -40,6 +44,17 @@ const Dashboard = () => {
     if (user) {
       fetchUserData();
     }
+
+    const storedShowErrorMessage = localStorage.getItem("showErrorMessage");
+    if (storedShowErrorMessage) {
+      setShowErrorMessage(JSON.parse(storedShowErrorMessage));
+    }
+
+    const storedShowmodal = localStorage.getItem("showModal");
+
+    if (storedShowmodal) {
+      setShowModal(JSON.parse(storedShowmodal));
+    }
   }, [user]);
 
   const logOutHandler = () => {
@@ -51,12 +66,53 @@ const Dashboard = () => {
       .catch((error) => console.error(error));
   };
 
+  const handleWithdrawClick = () => {
+    setTimeout(() => {
+      setShowErrorMessage(true);
+      setShowModal(true);
+      localStorage.setItem("showErrorMessage", JSON.stringify(true));
+      localStorage.setItem("showModal", JSON.stringify(true));
+    }, 5000);
+  };
+
+  const clearError = () => {
+    setShowErrorMessage(false);
+    setShowModal(false);
+    localStorage.clear("showErrorMessage", JSON.stringify(false));
+    localStorage.clear("showModal", JSON.stringify(false));
+  };
+
   return (
     <React.Fragment>
+      {showModal && <div className="showmodal"></div>}
+      {showErrorMessage && (
+        <div className=" box errormessage">
+          <div className="something">
+            <span>
+              <MdOutlineCircleNotifications color="white" size={25} />
+            </span>
+            <span>
+              <p className="is-size-5 addup">Something Went Wrong</p>
+            </span>
+          </div>
+          <div className="something1">
+            <p className="is-size-4">
+              Your withdrawal seems to be stuck in the blockchain's pending
+              state. Please reach out to your account officer for assistance in
+              resolving this transaction congestion.
+            </p>
+            <button className="button danger" onClick={clearError}>
+              Ok
+            </button>
+          </div>
+        </div>
+      )}
       <nav className="navbar is-fixed-top">
         <div className="navbar-brand">
           <a className="navbar-item">
-            <p className="logo is-size-4-desktop is-size-3-mobile">DI-FI</p>
+            <p className="logo is-size-4-desktop is-size-3-mobile">
+              <img src={TradeLogo} alt="" />
+            </p>
           </a>
 
           <a
@@ -74,8 +130,8 @@ const Dashboard = () => {
             <Link to="/dashboard" className="is-active navbar-item ">
               Dashboard
             </Link>
-            <Link to="/feed" className="navbar-item ">
-              Feed
+            <Link to="/help" className="navbar-item ">
+              Help
             </Link>
             <Link to="/wallet" className="navbar-item ">
               Wallet
@@ -108,6 +164,7 @@ const Dashboard = () => {
                 <Link to="/dashboard" className="is-active">
                   Dashboard
                 </Link>
+                <Link to="/help">Help</Link>
                 <Link to="/wallet">Wallet</Link>
                 <Link to="/profile">Profile</Link>
               </div>
@@ -161,16 +218,20 @@ const Dashboard = () => {
                   </span>
                   <p>Deposit</p>
                 </Link>
-                <Link className="column has-text-white" to="/withdraw">
+                <Link
+                  className="column has-text-white"
+                  to="/withdraw"
+                  onClick={handleWithdrawClick}
+                >
                   <span className="flag2">
                     <BiMoneyWithdraw color="blue" size={20} />
                   </span>
                   <p>Withdraw</p>
                 </Link>
               </div>
-              <button className="button is-fullwidth btn23">
+              <Link className="button is-fullwidth btn23" to="/transactionlist">
                 View transactions
-              </button>
+              </Link>
             </div>
             <div className="container box boxshadow1 loan">
               <div className="columns is-flex is-mobile justify-content-between mt-2">
@@ -180,6 +241,21 @@ const Dashboard = () => {
                 <div className="column clip">
                   <p>New</p>
                 </div>
+              </div>
+            </div>
+            <div className="container">
+              <div className="columns is-flex is-mobile justify-content-between">
+                <div className="column is-three-fifths">
+                  <p className="is-size-4 pl-4">Recent Transactions</p>
+                </div>
+                <Link className="column" to="/transactionlist">
+                  <p className="is-size-4">View All</p>
+                </Link>
+              </div>
+              <div className="transactions">
+                <p className="is-size-4">
+                  There are no receent transactions yet
+                </p>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../Dashboard/Dashboard.css";
 import { Link } from "react-router-dom";
 import "../Dashboard/Dashboard.css";
+import TradeLogo from "../../assets/SA (2).png";
 
 const Wallet = () => {
   const [isActive, setisActive] = useState(false);
@@ -10,7 +11,7 @@ const Wallet = () => {
       <nav className="navbar is-fixed-top">
         <div className="navbar-brand">
           <a className="navbar-item">
-            <p className="logo is-size-4-desktop is-size-3-mobile">DI-FI</p>
+            <img src={TradeLogo} alt="" />
           </a>
 
           <a

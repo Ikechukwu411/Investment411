@@ -16,6 +16,7 @@ import Roots from "../components/Roots.jsx";
 import TabComponent from "../components/Tab.jsx";
 import Payment from "../components/Payment.jsx";
 import ScrollToTop from "../components/ScrollToTop.jsx";
+import GoogleTranslateWidget from "../components/GoogleTranslateWidget.jsx";
 
 const Home = () => {
   useEffect(() => {
@@ -46,6 +47,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
+      <GoogleTranslateWidget />
       <Binance />
       <Navbar />
       <Hero />

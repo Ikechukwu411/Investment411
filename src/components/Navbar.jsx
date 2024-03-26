@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import TradeLogo from "../assets/SA (2).png";
 
 const navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -11,7 +12,10 @@ const navbar = () => {
           <div className="navbar-brand">
             <a href="#" className="navbar-item">
               <label htmlFor="" className="is-size-2-desktop is-size-3-mobile ">
-                <span>TradeHub</span>
+                <span>
+                  {" "}
+                  <img src={TradeLogo} alt="" />{" "}
+                </span>
               </label>
             </a>
             <a
