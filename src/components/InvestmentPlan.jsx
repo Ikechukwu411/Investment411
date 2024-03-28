@@ -4,6 +4,7 @@ import { PiGlobeStandBold } from "react-icons/pi";
 import { GiSilverBullet } from "react-icons/gi";
 import { IoDiamondOutline } from "react-icons/io5";
 import { MdRadioButtonChecked } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const InvestmentPlan = () => {
   return (
@@ -27,7 +28,9 @@ const InvestmentPlan = () => {
                 Gain at least <b>20%</b>
               </p>
               {/* <h3 className="is-size-3">20%</h3> */}
-              <button className="button mt-2 is-info">Get Started</button>
+              <Link className="button mt-2 is-info" to="/register">
+                Get Started
+              </Link>
               <ul>
                 <li className="is-size-5">
                   <span>
@@ -64,7 +67,9 @@ const InvestmentPlan = () => {
                 Gain at least <b>40%</b>
               </p>
               {/* <h3 className="is-size-3">40%</h3> */}
-              <button className="button mt-2 is-info">Get Started</button>
+              <Link className="button mt-2 is-info" to="/register">
+                Get Started
+              </Link>
               <ul>
                 <li className="is-size-5">
                   <span>
@@ -101,7 +106,9 @@ const InvestmentPlan = () => {
                 Gain at least <b>50%</b>
               </p>
               {/* <h3 className="is-size-3">50%</h3> */}
-              <button className="button mt-2 is-info">Get Started</button>
+              <Link className="button mt-2 is-info" to="/register">
+                Get Started
+              </Link>
               <ul>
                 <li className="is-size-5">
                   <span>
