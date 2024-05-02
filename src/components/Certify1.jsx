@@ -1,5 +1,6 @@
 import React from "react";
-import photo2 from "../assets/difi Certificate.png";
+// import photo2 from "../assets/difi Certificate.png";
+import certify from "../assets/Untitled design.png";
 
 const Certify1 = () => {
   return (
@@ -10,7 +11,7 @@ const Certify1 = () => {
             Trade Conformity and Market Advancement
           </h1>
           <div className="certificate">
-            <img src={photo2} alt="" />
+            <img src={certify} alt="" width={350} />
           </div>
         </div>
       </section>

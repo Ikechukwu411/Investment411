@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import TradeLogo from "../assets/SA (2).png";
+import { FaCoins } from "react-icons/fa";
 
 const navbar = () => {
   const [isActive, setIsActive] = useState(false);
   return (
     <React.Fragment>
-      <nav className="navbar is-fixed-top shadow">
+      <nav className="navbar  shadow">
         <div className="container">
           <div className="navbar-brand">
             <a href="#" className="navbar-item">
               <label htmlFor="" className="is-size-2-desktop is-size-3-mobile ">
                 <span>
                   {" "}
-                  <img src={TradeLogo} alt="" />{" "}
+                  <FaCoins color="orange" size={25} />
+                  Exchange
                 </span>
               </label>
             </a>
@@ -49,12 +50,14 @@ const navbar = () => {
                 <Link
                   to="/register"
                   className="navbar-item is-size-4 button is-info"
+                  id="navbtn"
                 >
                   Register
                 </Link>
                 <Link
                   to="/login"
                   className="navbar-item is-size-4-desktop button is-large is-info"
+                  id="navbtn"
                 >
                   Log In
                 </Link>

@@ -26,7 +26,7 @@ const AboutSimplified = () => {
             </div>
             <div className="column companyIv has-text-centered-mobile">
               <h2 className="is-size-2" id="innovate">
-                INNOVATIVE INVESTMENT COMPANY
+                Innovative Investment Company
               </h2>
               <p className="mt-4 is-size-3 is-size-4-mobile mb-4">
                 Since its inception in 2014, TradeHub has set out to disrupt the
@@ -46,7 +46,11 @@ const AboutSimplified = () => {
                 amateur by bringing their profit ranges at par with each other.
               </p>
 
-              <Link to="/register" className="button mt-6 is-medium is-link">
+              <Link
+                to="/register"
+                className="button mt-6 is-medium is-link"
+                id="getstarted"
+              >
                 Get Started
               </Link>
             </div>

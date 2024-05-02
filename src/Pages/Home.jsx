@@ -3,7 +3,7 @@ import Binance from "../components/Binance.jsx";
 import "../App.css";
 import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
-import Setup from "../components/Setup.jsx";
+// import Setup from "../components/Setup.jsx";
 import Footer from "../components/Footer.jsx";
 import Offer from "../components/Offer.jsx";
 import Certify1 from "../components/Certify1.jsx";
@@ -14,8 +14,9 @@ import InvestmentPlan from "../components/InvestmentPlan.jsx";
 import FourthSection from "../components/FourthSection.jsx";
 import Roots from "../components/Roots.jsx";
 import TabComponent from "../components/Tab.jsx";
-import Payment from "../components/Payment.jsx";
-import ScrollToTop from "../components/ScrollToTop.jsx";
+// import Payment from "../components/Payment.jsx";
+// import ScrollToTop from "../components/ScrollToTop.jsx";
+import Newcomponent from "../components/Newcomponent.jsx";
 import GoogleTranslateWidget from "../components/GoogleTranslateWidget.jsx";
 
 const Home = () => {
@@ -52,29 +53,33 @@ const Home = () => {
       <Navbar />
       <Hero />
       <div className="jobber">
+        <Newcomponent />
+      </div>
+      {/* <div className="jobber">
         <AboutSimplified />
-      </div>
-      <div className="jobber">
+      </div> */}
+      {/* <div className="jobber">
         <Setup />
-      </div>
-      <div className="jobber">
+      </div> */}
+      {/* <div className="jobber">
         <TradingView />
+      </div> */}
+      <div className="jobber">
+        <InvestmentPlan />
       </div>
       <div className="jobber">
         <Million />
       </div>
       <div className="jobber">
-        <InvestmentPlan />
-      </div>
-      <div className="jobber">
         <Roots />
       </div>
+
       <div className="jobber">
         <FourthSection />
       </div>
-      <div>
+      {/* <div>
         <Payment />
-      </div>
+      </div> */}
       <div className="jobber">
         <Certify1 />
       </div>
@@ -85,7 +90,7 @@ const Home = () => {
         <Offer />
       </div>
       {/* <NavbarBottom /> */}
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <Footer />
     </React.Fragment>
   );

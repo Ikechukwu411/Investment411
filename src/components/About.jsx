@@ -23,7 +23,11 @@ const About = () => {
                 nihil autem praesentium repudiandae similique quia, odio totam
                 accusantium quo aspernatur provident mollitia architecto.
               </p>
-              <Link to="/about1" className="button is-large is-info mt-6">
+              <Link
+                to="/about1"
+                className="button is-large is-info mt-6"
+                id="readBtn"
+              >
                 Read More
               </Link>
             </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Binance from "./components/Binance.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./Pages/Home.jsx";
 import About1 from "./Pages/About1.jsx";
@@ -9,8 +10,7 @@ import Login from "./Pages/Login.jsx";
 import Register from "./Pages/Register.jsx";
 import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
 import Wallet from "./Pages/Dashboard/Wallet.jsx";
-import Profile from "./Pages/Dashboard/Profile.jsx";
-import Withdraw from "./components/withdraw.jsx";
+import Withdraw from "./components/Withdraw.jsx";
 import Deposite from "./components/Deposite.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
 import DotLoader from "react-spinners/DotLoader.js";
@@ -39,8 +39,8 @@ const App = () => {
       {loading ? (
         <DotLoader
           className="load"
-          color={"#3E8ED0"}
-          size={100}
+          color={"orange"}
+          size={80}
           aria-label="Loading Spinner"
           data-testid="loader"
           cssOverride={override}

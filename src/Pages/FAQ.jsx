@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import "../App.css";
 import FAQSec from "../components/FAQSec";
 import Footer from "../components/Footer";
+import Binance from "../components/Binance";
 
 const faq = [
   {
@@ -59,6 +60,7 @@ const Frequent = () => {
   }, []);
   return (
     <div>
+      <Binance />
       <Navbar />
       <section className="section FAQ"></section>
       <section className="section jobber">

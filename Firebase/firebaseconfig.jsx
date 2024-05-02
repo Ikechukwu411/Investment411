@@ -1,16 +1,15 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-// import "firebase/functions";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCfczoQ9xH6avAdurvpToMeAEglxJAkc1s",
-  authDomain: "digitalfinance-59d76.firebaseapp.com",
-  projectId: "digitalfinance-59d76",
-  storageBucket: "digitalfinance-59d76.appspot.com",
-  messagingSenderId: "692902500944",
-  appId: "1:692902500944:web:5787059c30c6ca1c274f55",
+  apiKey: "AIzaSyBP7-10xzPJxSGAaHeVGhTwZhx5KdlfpCM",
+  authDomain: "exchangegecko.firebaseapp.com",
+  projectId: "exchangegecko",
+  storageBucket: "exchangegecko.appspot.com",
+  messagingSenderId: "573623265142",
+  appId: "1:573623265142:web:41bfd5d3931235b1883c57",
+  measurementId: "G-RDXD8GYY2T",
 };
 
 const app = initializeApp(firebaseConfig);

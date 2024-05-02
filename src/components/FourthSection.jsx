@@ -68,11 +68,9 @@ const FourthSection = () => {
     <React.Fragment>
       <section className="section fourthsec_bg">
         <div className="container box">
-          <h1
-            className="is-size-2-desktop is-size-4-mobile has-text-centered mb-5"
-            style={{ color: "#5E17EB" }}
-          >
-            Crypto Real -Time Data
+          <h1 className="is-size-2-desktop is-size-4-mobile has-text-centered mb-5">
+            <span style={{ color: "Orange" }}>Crypto Real</span> -
+            <span style={{ color: "black" }}>Time Data</span>
           </h1>
           {coinData.length > 0 ? (
             <table
@@ -81,19 +79,25 @@ const FourthSection = () => {
             >
               <thead className="is-size-3-desktop is-size-4-mobile">
                 <tr>
-                  <th>Rank</th>
-                  <th>Name</th>
-                  <th>Price (USD)</th>
-                  <th className="is-hidden-mobile">Market Cap</th>
-                  <th className="is-hidden-mobile">Supply</th>
-                  <th className="is-hidden-mobile">Symbol</th>
+                  <th style={{ color: "black" }}>Rank</th>
+                  <th style={{ color: "black" }}>Name</th>
+                  <th style={{ color: "black" }}>Price (USD)</th>
+                  <th className="is-hidden-mobile" style={{ color: "black" }}>
+                    Market Cap
+                  </th>
+                  <th className="is-hidden-mobile" style={{ color: "black" }}>
+                    Supply
+                  </th>
+                  <th className="is-hidden-mobile" style={{ color: "black" }}>
+                    Symbol
+                  </th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody style={{ color: "black" }}>
                 {coinData.map((coin, index) => (
                   <tr key={coin.id} className="is-size-4">
                     <td>{index + 1}</td>
-                    <td>
+                    <td style={{ color: "black" }}>
                       <div className="crypto-info">
                         <img
                           src={coinImage[index]}
@@ -104,14 +108,18 @@ const FourthSection = () => {
                         {coin[index].name}
                       </div>
                     </td>
-                    <td>${parseFloat(coin[index].priceUsd).toFixed(2)}</td>
-                    <td className="is-hidden-mobile">
+                    <td style={{ color: "black" }}>
+                      ${parseFloat(coin[index].priceUsd).toFixed(2)}
+                    </td>
+                    <td className="is-hidden-mobile" style={{ color: "black" }}>
                       {parseFloat(coin[index].marketCapUsd).toFixed(2)}
                     </td>
-                    <td className="is-hidden-mobile">
+                    <td className="is-hidden-mobile" style={{ color: "black" }}>
                       {parseFloat(coin[index].supply).toFixed(2)}
                     </td>
-                    <td className="is-hidden-mobile">{coin[index].symbol}</td>
+                    <td className="is-hidden-mobile" style={{ color: "black" }}>
+                      {coin[index].symbol}
+                    </td>
                   </tr>
                 ))}
               </tbody>

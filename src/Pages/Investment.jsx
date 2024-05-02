@@ -7,6 +7,7 @@ import { IoDiamondOutline } from "react-icons/io5";
 import { MdRadioButtonChecked } from "react-icons/md";
 import { FaCheckCircle } from "react-icons/fa";
 import Footer from "../components/Footer";
+import Binance from "../components/Binance";
 
 let tvScriptLoadingPromise;
 
@@ -82,11 +83,12 @@ const Investment = () => {
 
   return (
     <React.Fragment>
+      <Binance />
       <Navbar />
       <section className="section herosection"></section>
       <section className="section jobber">
         <div className="container has-text-centered fontsize">
-          <h2 className="is-size-1">
+          <h2 className="is-size-2-desktop is-size-3-mobile">
             Best Investment Plan To Accelerate Your Wealth Fast
           </h2>
           <p className="is-size-4">
@@ -101,29 +103,31 @@ const Investment = () => {
               </h3>
               <p className="is-size-5">Lorem ipsum dolor sit amet.</p>
               <h3 className="is-size-3">20%</h3>
-              <button className="button mt-2 is-info">Get Started</button>
+              <button className="button mt-2 " id="button">
+                Get Started
+              </button>
               <ul>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Minimum amount - 100usd</span>
                 </li>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Maximum amount - 499usd</span>
                 </li>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Payout - 12hrs</span>
                 </li>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Customer Support - 24/7</span>
                 </li>
@@ -136,29 +140,31 @@ const Investment = () => {
               </h3>
               <p className="is-size-5">Lorem ipsum dolor sit amet.</p>
               <h3 className="is-size-3">40%</h3>
-              <button className="button mt-2 is-info">Get Started</button>
+              <button className="button mt-2 " id="button">
+                Get Started
+              </button>
               <ul>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Minimum amount - 500usd</span>
                 </li>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Maximum amount - 1000usd</span>
                 </li>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Payout - 24hrs</span>
                 </li>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Customer Support - 24/7</span>
                 </li>
@@ -171,29 +177,31 @@ const Investment = () => {
               </h3>
               <p className="is-size-5">Lorem ipsum dolor sit amet.</p>
               <h3 className="is-size-3">50%</h3>
-              <button className="button mt-2 is-info">Get Started</button>
+              <button className="button mt-2 " id="button">
+                Get Started
+              </button>
               <ul>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Minimum amount - 1000usd</span>
                 </li>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Maximum amount - 1000 Above</span>
                 </li>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Payout - 24hrs</span>
                 </li>
                 <li className="is-size-5">
                   <span>
-                    <MdRadioButtonChecked color="blue" />
+                    <MdRadioButtonChecked color="orange" />
                   </span>{" "}
                   <span className="is-size-4">Customer Support - 24/7</span>
                 </li>
@@ -214,7 +222,7 @@ const Investment = () => {
               <ul className="mt-3">
                 <li>
                   <span>
-                    <FaCheckCircle size={20} color="blue" />
+                    <FaCheckCircle size={20} color="orange" />
                   </span>{" "}
                   <span className="ml-3 is-size-4">
                     Cryptocurrency Price Alerts
@@ -222,7 +230,7 @@ const Investment = () => {
                 </li>
                 <li>
                   <span>
-                    <FaCheckCircle size={20} color="blue" />
+                    <FaCheckCircle size={20} color="orange" />
                   </span>{" "}
                   <span className="ml-3 is-size-4">
                     Cryptocurrency Price Alerts
@@ -230,7 +238,7 @@ const Investment = () => {
                 </li>
                 <li>
                   <span>
-                    <FaCheckCircle size={20} color="blue" />
+                    <FaCheckCircle size={20} color="orange" />
                   </span>{" "}
                   <span className="ml-3 is-size-4">
                     Cryptocurrency Price Alerts

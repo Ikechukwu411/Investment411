@@ -1,6 +1,5 @@
 import React from "react";
-import { FaBtc } from "react-icons/fa";
-import { IoLogoUsd } from "react-icons/io";
+import { FaCoins } from "react-icons/fa";
 
 import "./footer.css";
 
@@ -11,25 +10,30 @@ const Footer = () => {
         <div className="container">
           <div className="columns">
             <div className="column">
-              <p className="is-size-2">TradeHub</p>
+              <p className="is-size-2">
+                <span>
+                  <FaCoins color="orange" size={25} />
+                </span>
+                <span>Exchange</span>
+              </p>
               <ul>
                 <li className="is-size-4 mb-2">
-                  <b>Location</b>: United States, United Kingdom and Cyprus
+                  <b>Location</b>: United States
                 </li>
                 <li className="is-size-4 mb-2">
-                  <b>Phone/Text</b>: +1(216) 425-6086, +447448319510
+                  <b>Phone/Text</b>: +1(44) 2249-0305, +447435457883
                 </li>
                 <li className="is-size-4 mb-2">
-                  <b>Email</b>: Tradehubconsult@gmail.com
+                  <b>Email</b>: contactus@exchangegecko.com
                 </li>
                 <li className="is-size-4 mb-2">
-                  <b>Address</b>: Clowes Street, Manchester M26EG, United
-                  Kingdom
+                  <b>Address</b>: Bespole Century Ciy, 10281 W Piico Blvd, Los
+                  Angeles, CA 90064, United States
                 </li>
               </ul>
             </div>
             <div className="column">
-              <p className="is-size-2">Services</p>
+              <p className="is-size-2-desktop is-size-4-mobile">Services</p>
               <ul>
                 <li className="is-size-4 mb-2">Crypto-Currency</li>
                 <li className="is-size-4 mb-2">Loan</li>
@@ -37,14 +41,16 @@ const Footer = () => {
               </ul>
             </div>
             <div className="column">
-              <p className="is-size-2">More Solutions From TradeHub</p>
+              <p className="is-size-2-desktop is-size-4-mobile">
+                More Solutions From TradeHub
+              </p>
               <ul>
                 <li className="is-size-4 mb-2">Real-Estate</li>
                 <li className="is-size-4 mb-2">Banking</li>
                 <li className="is-size-4 mb-2">Forex Trading</li>
               </ul>
             </div>
-            <div className="column">
+            {/* <div className="column">
               <p className="is-size-2">Wallet Address</p>
               <ul>
                 <li className="is-size-4 mb-2">
@@ -62,7 +68,7 @@ const Footer = () => {
                   <span>TN2GsVugzcxsTA8cPRbSrfZqzYZ6zMQM7j</span>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

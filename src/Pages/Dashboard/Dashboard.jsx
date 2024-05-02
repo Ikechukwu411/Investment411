@@ -10,8 +10,10 @@ import { IoIosSend } from "react-icons/io";
 import { GoArrowDownLeft } from "react-icons/go";
 import { FaPlus } from "react-icons/fa6";
 import { BiMoneyWithdraw } from "react-icons/bi";
-import TradeLogo from "../../assets/SA (2).png";
+// import TradeLogo from "../../assets/SA (2).png";
 import { MdOutlineCircleNotifications } from "react-icons/md";
+// import TradingView from "../../components/TradingView";
+import { FaCoins } from "react-icons/fa";
 
 const Dashboard = () => {
   const [isActive, setisActive] = useState(false);
@@ -21,6 +23,12 @@ const Dashboard = () => {
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [showModal, setShowModal] = useState(false);
   console.log(user.email);
+  const redirectToBinance = () => {
+    window.open("https://www.binance.com/", "_blank");
+  };
+  const redirectToTradeview = () => {
+    window.open("https://www.tradingview.com/#main-market-summary", "_blank");
+  };
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -97,8 +105,8 @@ const Dashboard = () => {
           </div>
           <div className="something1">
             <p className="is-size-4">
-              Your withdrawal seems to be stuck in the blockchain's pending
-              state. Please reach out to your account officer for assistance in
+              Your withdrawal seems to be stuck in the blockchain pending state.
+              Please reach out to your account officer for assistance in
               resolving this transaction congestion.
             </p>
             <button className="button danger" onClick={clearError}>
@@ -110,8 +118,11 @@ const Dashboard = () => {
       <nav className="navbar is-fixed-top">
         <div className="navbar-brand">
           <a className="navbar-item">
-            <p className="logo is-size-4-desktop is-size-3-mobile">
-              <img src={TradeLogo} alt="" />
+            <p className="logo is-size-4-desktop is-size-3-mobile has-text-color-black">
+              <span>
+                <FaCoins color="orange" />
+              </span>
+              Exchange
             </p>
           </a>
 
@@ -174,11 +185,11 @@ const Dashboard = () => {
             <div className="container dasboardcontainer"></div>
 
             <div className="container auto">
-              <div className="columns is-flex is-mobile is-justify-content-flex-end">
-                <div className="column">
+              <div className="columns is-flex is-mobile is-justify-content-flex-end mt-6">
+                <div className="column mt-3">
                   <p className="is-size-4 has-text-weight-bold">Wallet</p>
                 </div>
-                <div className="column">
+                <div className="column mt-3">
                   <p className="is-size-4 has-text-weight-bold">
                     <span>Welcome - </span>
                     <span>{user.displayName}</span>
@@ -202,15 +213,23 @@ const Dashboard = () => {
               <div className="columns is-flex is-mobile justify-content-between">
                 <div className="column ">
                   <span className="flag2">
-                    <IoIosSend color="blue" size={20} />
+                    <IoIosSend
+                      color="blue"
+                      size={20}
+                      onClick={redirectToTradeview}
+                    />
                   </span>
-                  <p>Send</p>
+                  <p>Market</p>
                 </div>
                 <div className="column">
                   <span className="flag2">
-                    <GoArrowDownLeft color="blue" size={20} />
+                    <GoArrowDownLeft
+                      color="blue"
+                      size={20}
+                      onClick={redirectToBinance}
+                    />
                   </span>
-                  <p>Recieve</p>
+                  <p>Buy</p>
                 </div>
                 <Link className="column has-text-white" to="/deposit">
                   <span className="flag2">
@@ -218,8 +237,8 @@ const Dashboard = () => {
                   </span>
                   <p>Deposit</p>
                 </Link>
-                <Link
-                  className="column has-text-white"
+                {/* <Link
+                  className="column has-text-white "
                   to="/withdraw"
                   onClick={handleWithdrawClick}
                 >
@@ -227,7 +246,26 @@ const Dashboard = () => {
                     <BiMoneyWithdraw color="blue" size={20} />
                   </span>
                   <p>Withdraw</p>
-                </Link>
+                </Link> */}
+                {totalBalance >= 1000 ? (
+                  <Link
+                    className="column has-text-white"
+                    to="/withdraw"
+                    onClick={handleWithdrawClick}
+                  >
+                    <span className="flag2">
+                      <BiMoneyWithdraw color="blue" size={20} />
+                    </span>
+                    <p>Withdraw</p>
+                  </Link>
+                ) : (
+                  <div className="column has-text-white disabled">
+                    <span className="flag2">
+                      <BiMoneyWithdraw color="blue" size={20} />
+                    </span>
+                    <p>Withdraw</p>
+                  </div>
+                )}
               </div>
               <Link className="button is-fullwidth btn23" to="/transactionlist">
                 View transactions
@@ -257,6 +295,7 @@ const Dashboard = () => {
                   There are no receent transactions yet
                 </p>
               </div>
+              {/* <TradingView /> */}
             </div>
           </div>
         </div>

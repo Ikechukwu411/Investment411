@@ -1,12 +1,16 @@
 import React from "react";
 import { FaCheckDouble } from "react-icons/fa";
+import "../App.css";
 
 const Roots = () => {
   return (
     <React.Fragment>
       <section className="section">
         <div className="container ">
-          <h2 className="has-text-centered is-size-2 mb-3">
+          <h2
+            className="has-text-centered is-size-2-desktop is-size-3-mobile mb-3"
+            id="takeadd"
+          >
             Take advantage of proven solutions to achieve cryptocoin success
           </h2>
           <p className="has-text-centered is-size-4">
@@ -24,7 +28,7 @@ const Roots = () => {
           <div className="columns mt-6">
             <div className="column is-flex ">
               <div>
-                <FaCheckDouble size={25} color="blue" />
+                <FaCheckDouble size={25} color="Orange" />
               </div>
               <div className="ml-5">
                 <span className="has-text-weight-bold ml-4 mr-3 is-size-4">
@@ -35,7 +39,7 @@ const Roots = () => {
             </div>
             <div className="column is-flex ">
               <div>
-                <FaCheckDouble size={25} color="blue" />
+                <FaCheckDouble size={25} color="orange" />
               </div>
               <div className="ml-5">
                 <span className="has-text-weight-bold ml-4 mr-3 is-size-4">
@@ -46,7 +50,7 @@ const Roots = () => {
             </div>
             <div className="column is-flex ">
               <div>
-                <FaCheckDouble size={25} color="blue" />
+                <FaCheckDouble size={25} color="orange" />
               </div>
               <div className="ml-5">
                 <span className="has-text-weight-bold ml-4 mr-3 is-size-4">

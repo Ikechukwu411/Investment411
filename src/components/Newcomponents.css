@@ -1,0 +1,33 @@
+.container {
+  width: 90%;
+  margin: auto auto;
+  font-family: "system-ui";
+
+  /* font-family: "Clash Display", sans-serif; */
+}
+
+#container {
+  color: black;
+  font-family: "system-ui";
+}
+
+#bigletter > h1::first-letter {
+  font-size: 200%;
+}
+.position__Image {
+  margin-left: 2rem;
+}
+#image1 {
+  margin-top: 6rem;
+  animation: upanddown 2s ease-in-out infinite;
+}
+
+@keyframes upanddown {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}

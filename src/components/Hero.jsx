@@ -24,7 +24,11 @@ const Hero = () => {
             Distinctio, quas!
           </p> */}
 
-          <Link to="/register" className="is-large button mt-6 is-info">
+          <Link
+            to="/register"
+            className="is-large button mt-6 is-info"
+            id="btn"
+          >
             Get Started{" "}
           </Link>
         </div>

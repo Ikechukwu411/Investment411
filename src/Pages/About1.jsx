@@ -11,6 +11,7 @@ import AboutImage3 from "../assets/image3.jpg";
 import AboutImage4 from "../assets/Aboutus.jpg";
 import Offer from "../components/Offer";
 import Footer from "../components/Footer";
+import Binance from "../components/Binance";
 
 const Counter = ({ target }) => {
   const [count, setCount] = useState(0);
@@ -64,6 +65,7 @@ const About1 = () => {
   }, []);
   return (
     <React.Fragment>
+      <Binance />
       <Navbar />
       <section className="section aboutHero ">
         <div className="container">
@@ -145,28 +147,28 @@ const About1 = () => {
             <div className="column aboutInfotxt ml-6">
               <p className="is-size-3">About Us</p>
               <h1 className="is-size-1">
-                Introducing TradeHub: Your Gateway to Profitable Trading
+                Introducing Exchangegecko: Your Gateway to Profitable Trading
                 Opportunities!
               </h1>
               <p className="mt-4 is-size-4">
                 Are you ready to take your trading ventures to the next level?
-                Look no further than TradeHub, the ultimate platform designed to
-                maximize your trading potential and secure your financial
-                future.
+                Look no further than Exchangegecko, the ultimate platform
+                designed to maximize your trading potential and secure your
+                financial future.
               </p>
               <h3 className="mt-3 is-size-2">
-                Why should you invest in TradeHub?
+                Why should you invest in Exchangegecko?
               </h3>
               <ul className="mt-6">
                 <li className="mt-1 is-size-4">
                   <h2 className="is-size-3">Proven Profitability</h2>
                   <p>
                     <span className="mr-4">
-                      <FaHouseUser size={25} color="blue" />
+                      <FaHouseUser size={25} color="orange" />
                     </span>
                     <span>
-                      With TradeHub, success isn't just a possibility — its a
-                      reality. Countless users, including myself, have reaped
+                      With Exchangegecko, success isn`t just a possibility — its
+                      a reality. Countless users, including myself, have reaped
                       the rewards of our innovative platform, generating
                       consistent profits and achieving financial independence.
                     </span>
@@ -176,15 +178,15 @@ const About1 = () => {
                   <h2 className="is-size-3">Innovative Features</h2>
                   <p>
                     <span className="mr-4">
-                      <FaHouseUser size={25} color="blue" />
+                      <FaHouseUser size={25} color="orange" />
                     </span>
                     <span>
-                      TradeHub isn't your ordinary trading platform. Our
+                      Exchangegecko isn`t your ordinary trading platform. Our
                       cutting-edge features, intuitive interface, and advanced
                       analytics empower users to make informed decisions and
                       execute trades with confidence. From real-time market data
                       to customizable trading strategies, we provide everything
-                      you need to succeed in today's dynamic markets.
+                      you need to succeed in today`s dynamic markets.
                     </span>
                   </p>
                 </li>
@@ -192,14 +194,14 @@ const About1 = () => {
                   <h2 className="is-size-3">Unparalleled Support.</h2>
                   <p>
                     <span className="mr-4">
-                      <FaHouseUser size={25} color="blue" />
+                      <FaHouseUser size={25} color="orange" />
                     </span>
                     <span>
-                      At TradeHub, we prioritize the success of our users above
-                      all else. Our dedicated support team is available around
-                      the clock to address any questions or concerns you may
-                      have, ensuring that you always have the guidance you need
-                      to thrive in the world of trading.
+                      At Exchangegecko, we prioritize the success of our users
+                      above all else. Our dedicated support team is available
+                      around the clock to address any questions or concerns you
+                      may have, ensuring that you always have the guidance you
+                      need to thrive in the world of trading.
                     </span>
                   </p>
                 </li>
@@ -207,11 +209,11 @@ const About1 = () => {
                   <h2 className="is-size-3">Global Reach.</h2>
                   <p>
                     <span className="mr-4">
-                      <FaHouseUser size={25} color="blue" />
+                      <FaHouseUser size={25} color="orange" />
                     </span>
                     <span>
-                      Whether you're a seasoned investor or a novice trader,
-                      TradeHub offers access to a diverse range of markets,
+                      Whether you`re a seasoned investor or a novice trader,
+                      Exchangegecko offers access to a diverse range of markets,
                       assets, and investment opportunities from around the
                       globe. With our platform, you can trade stocks, forex,
                       cryptocurrencies, commodities, and more—all from the
@@ -223,14 +225,14 @@ const About1 = () => {
                   <h2 className="is-size-3">Future-Proof Technology.</h2>
                   <p>
                     <span className="mr-4">
-                      <FaHouseUser size={25} color="blue" />
+                      <FaHouseUser size={25} color="orange" />
                     </span>
                     <span>
                       We understand that the world of trading is constantly
-                      evolving, which is why we're committed to staying ahead of
+                      evolving, which is why we`re committed to staying ahead of
                       the curve. From artificial intelligence and machine
                       learning to blockchain technology and decentralized
-                      finance, TradeHub is at the forefront of innovation,
+                      finance, Exchangegecko is at the forefront of innovation,
                       ensuring that our users always have access to the latest
                       tools and techniques.
                     </span>
@@ -240,26 +242,26 @@ const About1 = () => {
                   <h2 className="is-size-3">Transparency and Security.</h2>
                   <p>
                     <span className="mr-4">
-                      <FaHouseUser size={25} color="blue" />
+                      <FaHouseUser size={25} color="orange" />
                     </span>
                     <span>
                       Trust is the foundation of any successful trading
                       platform, which is why we prioritize transparency and
-                      security above all else. With TradeHub, you can trade with
-                      confidence, knowing that your funds are safe and your
+                      security above all else. With Exchangegecko, you can trade
+                      with confidence, knowing that your funds are safe and your
                       transactions are secure.
                     </span>
                   </p>
                 </li>
               </ul>
               <p className="mt-6 is-size-4">
-                Don't miss out on this incredible opportunity to invest in
-                TradeHub and secure your financial future. Join the thousands of
-                successful traders who have already made the smart choice to
-                partner with us. Together, we can unlock a world of profitable
-                trading opportunities.
+                Don`t miss out on this incredible opportunity to invest in
+                Exchangegecko and secure your financial future. Join the
+                thousands of successful traders who have already made the smart
+                choice to partner with us. Together, we can unlock a world of
+                profitable trading opportunities.
               </p>
-              <button className="button is-large is-info mt-6">
+              <button className="button is-large  mt-6" id="button">
                 Get Started
               </button>
             </div>
@@ -281,7 +283,7 @@ const About1 = () => {
               <ul className="mt-3">
                 <li>
                   <span>
-                    <FaCheckCircle size={20} color="blue" />
+                    <FaCheckCircle size={20} color="orange" />
                   </span>{" "}
                   <span className="ml-3 is-size-4">
                     Cryptocurrency Price Alerts
@@ -289,7 +291,7 @@ const About1 = () => {
                 </li>
                 <li>
                   <span>
-                    <FaCheckCircle size={20} color="blue" />
+                    <FaCheckCircle size={20} color="orange" />
                   </span>{" "}
                   <span className="ml-3 is-size-4">
                     Cryptocurrency Price Alerts
@@ -297,7 +299,7 @@ const About1 = () => {
                 </li>
                 <li>
                   <span>
-                    <FaCheckCircle size={20} color="blue" />
+                    <FaCheckCircle size={20} color="orange" />
                   </span>{" "}
                   <span className="ml-3 is-size-4">
                     Cryptocurrency Price Alerts

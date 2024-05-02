@@ -126,7 +126,7 @@ const LoginForm = () => {
             <a href="/register">Dont Have an Account ?</a>
           </p>
         </div>
-        <button className="button is-info is-large mb-3">Log In</button>
+        <button className="button is-warning is-large mb-3">Log In</button>
       </form>
     </React.Fragment>
   );

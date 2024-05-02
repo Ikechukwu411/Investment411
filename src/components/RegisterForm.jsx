@@ -46,7 +46,7 @@ const validate = (values) => {
 
 const RegisterForm = () => {
   const navigate = useNavigate();
-  const { createUser, user } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
   // if (user) {
   //   navigate("/dashboard");
   // }
@@ -88,9 +88,9 @@ const RegisterForm = () => {
           navigate("/login");
         }, 3000);
 
-        const serviceId = "service_w1e1fwc";
-        const templateId = "template_cumf88j";
-        const publicKey = "DlG3U4EeyORAHfYlA";
+        const serviceId = "service_xyu3bxo";
+        const templateId = "template_jv4a0an";
+        const publicKey = "zqts_NXzr_eBaQXJq";
 
         const templateParams = {
           from_name: values.firstname,
@@ -213,10 +213,7 @@ const RegisterForm = () => {
             <div style={{ color: "red" }}>{formik.errors.confirm}</div>
           ) : null}
         </div>
-        <button
-          className="button is-info is-fullwidth is-medium mt-5"
-          type="submit"
-        >
+        <button className="button  is-fullwidth is-medium mt-5" type="submit">
           {" "}
           Submit
         </button>

@@ -1,13 +1,22 @@
 .companyIv {
-  color: #1d1749;
+  color: black;
+  font-weight: 500;
+  font-family: "system-ui", sans-serif;
 }
 #innovate {
-  color: #2c236b;
+  color: black;
+  font-family: "system-ui", sans-serif;
 }
 .abt {
   color: orange;
 }
 
+#getstarted {
+  background-color: rgb(255, 170, 0);
+  border-radius: 0px;
+
+  box-shadow: 5px 5px 10px #a5a4a4, -5px -5px 10px #ffffff;
+}
 .video-container {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -21,17 +30,22 @@
   width: 100%;
   height: 100%;
 }
+#takeadd {
+  font-family: "system-ui";
+  font-weight: 500;
+}
 
 .millionusers {
-  background-image: url(../src/assets/users.jpg);
+  background-image: url(./assets/millions2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-attachment: fixed;
   color: white;
   position: relative;
   height: 70vh;
   width: 100%;
+  font-family: "system-ui";
 }
 .box10 {
   width: 90%;
@@ -41,16 +55,21 @@
   background-color: white;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  border-top: 4px solid #2cb1bc;
+  border-top: 4px solid orange;
   padding: 3rem;
+  font-family: "system-ui";
 }
-
+.button {
+  background-color: orange;
+  color: white;
+}
 .dificolor {
   background-color: #2cb1bc;
   color: white;
   padding: 1rem;
   width: 100px;
   height: 100px;
+  font-family: "system-ui";
 }
 .logoheader {
   color: #2cb1bc;
@@ -59,6 +78,11 @@
 .transactpagebg {
   background-color: #dbe1fa;
   height: 100vh;
+}
+.plans {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
 }
 
 .registerbackground {
@@ -175,6 +199,9 @@ img {
   font-weight: 500;
   padding-bottom: 3rem;
   border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
 }
 .fontsize {
   /* font-weight: 500; */
@@ -215,15 +242,19 @@ img {
 }
 
 .login {
-  background-color: #1565c00a;
+  /* background-color: #ffffff0a; */
+  background-image: url(./assets/loginbg.png);
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100%;
 }
 .binance-widget-container {
   position: fixed;
-  bottom: 0;
+  margin-bottom: -25px;
+  top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .form > button {
